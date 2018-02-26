@@ -1,0 +1,71 @@
+/*
+ * Typo(modulety)
+ */
+
+.title-lv1 {
+  color: $brand-color;
+  @include rem(40);
+  font-weight: 100;
+  line-height: 1.2;
+}
+.title-lv2 {
+  color: $brand-color;
+  @include rem(20);
+  font-weight: 600;
+  line-height: 1.4;
+}
+.text10 { @include rem(10); }
+.text12 { @include rem(12); }
+.text14 { @include rem(14); }
+.text16 { @include rem(16); }
+.text18 { @include rem(18); }
+.text20 { @include rem(20); }
+.text22 { @include rem(22); }
+.text24 { @include rem(24); }
+.text26 { @include rem(26); }
+.text28 { @include rem(28); }
+.text30 { @include rem(30); }
+.text32 { @include rem(32); }
+.text34 { @include rem(34); }
+.text36 { @include rem(36); }
+.text38 { @include rem(38); }
+.text40 { @include rem(40); }
+.text42 { @include rem(42); }
+.text44 { @include rem(44); }
+.text46 { @include rem(46); }
+.text48 { @include rem(48); }
+.text50 { @include rem(50); }
+.bold { font-weight: 600; }
+.light { font-weight: 100; }
+
+
+
+//
+// mobile
+//
+@media(max-width: $screen-sm) {
+  .title-lv1 {
+    @include rem(30);
+  }
+  .sm-text10 { @include rem(10); }
+  .sm-text12 { @include rem(12); }
+  .sm-text14 { @include rem(14); }
+  .sm-text16 { @include rem(16); }
+  .sm-text18 { @include rem(18); }
+  .sm-text20 { @include rem(20); }
+  .sm-text22 { @include rem(22); }
+  .sm-text24 { @include rem(24); }
+  .sm-text26 { @include rem(26); }
+  .sm-text28 { @include rem(28); }
+  .sm-text30 { @include rem(30); }
+  .sm-text32 { @include rem(32); }
+  .sm-text34 { @include rem(34); }
+  .sm-text36 { @include rem(36); }
+  .sm-text38 { @include rem(38); }
+  .sm-text40 { @include rem(40); }
+  .sm-text42 { @include rem(42); }
+  .sm-text44 { @include rem(44); }
+  .sm-text46 { @include rem(46); }
+  .sm-text48 { @include rem(48); }
+  .sm-text50 { @include rem(50); }
+}

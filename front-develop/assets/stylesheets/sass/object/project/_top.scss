@@ -1,0 +1,224 @@
+/************************************
+** サイドバー（Sidebar）・ウィジェットなど
+************************************/
+#sidebar h3{
+  margin-bottom: 10px;
+  font-size:20px;
+}
+#sidebar .widget{
+  margin-bottom: 45px;
+}
+
+.widget_search{
+  margin-bottom: 0;
+}
+
+#sidebar ul,
+#sidebar ol,
+.widget-over-article ul,
+.widget-over-article ol,
+.widget-under-article ul,
+.widget-under-article ol,
+.widget-over-sns-buttons ul,
+.widget-over-sns-buttons ol,
+.widget-under-sns-buttons ul,
+.widget-under-sns-buttons ol{
+  padding-left: 1em;
+  list-style:none;
+}
+
+#sidebar ul.snsp,
+#main ul.snsp,
+#footer ul.snsp{
+  padding-left: 0;
+}
+
+.widget-over-article{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#sidebar-recent-posts li,
+#sidebar-popular-posts li{
+  margin:20px 0;
+}
+
+#sidebar li{
+  margin-bottom: 8px;
+}
+
+.sidebar-thumbnail-box{
+  float: left;
+  width: 75px;
+}
+
+.sidebar-recent-posts-title{
+  float: right;
+  width: 165px;
+}
+  #sidebar-recent-posts h3,
+  #sidebar-recent-posts p,
+  #sidebar-popular-posts h3,
+  #sidebar-popular-posts p{
+    margin: 0;
+  }
+
+#main .widgets{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#sidebar .widget_category_sns_follow_buttons ul,
+.widget_category_sns_follow_buttons ul{
+  padding-left: 0;
+}
+
+.widget_text ul {
+  list-style-type:  disc;
+}
+.widget_text ol {
+  list-style-type:  decimal;
+}
+
+/************************************
+** 新着記事・人気記事（new, pupular）
+************************************/
+.widget_new_entries,
+.widget_new_popular,
+.widget_popular_ranking{
+  line-height:150%;
+}
+
+.widget_new_entries h4,
+.widget_new_popular h4,
+.widget_popular_ranking h4{
+  margin-bottom:15px;
+}
+
+#main .widget_new_entries ul,
+#main .widget_new_popular ul,
+#main .widget_popular_ranking ul,
+#sidebar .widget_new_entries ul,
+#sidebar .widget_new_popular ul,
+#sidebar .widget_popular_ranking ul,
+#footer .widget_new_entries ul,
+#footer .widget_new_popular ul,
+#footer .widget_popular_ranking ul {
+  padding-left:0;
+  list-style:none;
+}
+
+.widget_new_entries ul li,
+.widget_new_popular ul li,
+.widget_popular_ranking ul li {
+  clear: left;
+  float: none;
+  margin-bottom:10px;
+/*  overflow: auto;
+  zoom: 1;*/
+}
+
+.widget_new_entries ul li img,
+.widget_new_popular ul li img,
+.widget_popular_ranking ul li img {
+  border: medium none;
+  display: inline;
+  float: left;
+  margin-top: 3px;
+  margin-right: 5px;
+  width: 75px;
+  height: 75px;
+  margin-bottom: 10px;
+}
+
+span.wpp-views{
+  font-size:x-small;
+  font-style:italic;
+}
+
+/************************************
+** 新着記事・人気記事（拡張）
+************************************/
+.widget_new_entries .new-entrys-large .new-entry,
+.widget_new_popular .popular-entrys-large .popular-entry,
+.widget_new_popular .new-entrys-large .new-entry,
+.widget_new_popular .popular-entrys-large .wpp-list li,
+.widget_popular_ranking .popular-entrys-large .popular-entry,
+.widget_popular_ranking .popular-entrys-large .wpp-list li{
+  margin-bottom:15px;
+  line-height:120%;
+  position:relative;
+  display:block;
+  max-width: 440px;/*これを書いておかないと、タイトル部分がはみ出す*/
+  overflow: visible;
+}
+
+.widget_new_entries .new-entrys-large .new-entry img,
+.widget_new_popular .popular-entrys-large .popular-entry img,
+.widget_new_popular .new-entrys-large .new-entry img,
+.widget_new_popular .popular-entrys-large .wpp-list li img,
+.widget_popular_ranking .popular-entrys-large .popular-entry img,
+.widget_popular_ranking .popular-entrys-large .wpp-list li img{
+  width:100%;
+  float:none;
+  margin:0;
+  display:block;
+  margin-bottom:5px;
+  min-height: 180px;
+  max-width: 440px;/*iPhone6は幅が414pxなのでそれより大きく*/
+  max-height: 240px;
+  height: auto;
+}
+
+.widget_new_popular .popular-entrys-large .wpp-list li img.wpp_cached_thumb,
+.widget_popular_ranking .popular-entrys-large .wpp-list li img.wpp_cached_thumb{
+  height:auto;
+}
+
+.widget_new_entries .new-entrys-large-on .new-entry .new-entry-content,
+.widget_new_popular .popular-entrys-large-on .popular-entry .popular-entry-content,
+.widget_new_popular .new-entrys-large-on .new-entry .new-entry-content,
+.widget_new_popular .popular-entrys-large-on .wpp-list li a.wpp-post-title,
+.widget_popular_ranking .popular-entrys-large-on .popular-entry .popular-entry-content,
+.widget_popular_ranking .popular-entrys-large-on .wpp-list li a.wpp-post-title{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  /* 画像をBase64にするためコメントアウト
+  background: url("images/black-transparent.png") repeat scroll 0 0 transparent; */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyAQMAAAAk8RryAAAAA1BMVEUAAACnej3aAAAAAXRSTlOZyTXzhgAAAA1JREFUGNNjGAWDCgAAAZAAAXtlmk8AAAAASUVORK5CYII=") repeat scroll 0 0 transparent;
+/*  opacity:0.7;
+  background-color:#222;*/
+  padding:10px;
+  max-height:28%;
+  overflow:hidden;
+  display:block;
+}
+
+.widget_new_entries .new-entrys-large-on .new-entry .new-entry-content a,
+.widget_new_popular .popular-entrys-large-on .popular-entry .popular-entry-content a,
+.widget_new_popular .new-entrys-large-on .new-entry .new-entry-content a,
+.widget_new_popular .popular-entrys-large-on .wpp-list li a.wpp-post-title,
+.widget_popular_ranking .popular-entrys-large-on .popular-entry .popular-entry-content a,
+.widget_popular_ranking .popular-entrys-large-on .wpp-list li a.wpp-post-title {
+  color:#fff;
+  /*opacity:0.8;*/
+  display:block;
+}
+
+.widget_new_popular .popular-entrys-large-on .wpp-list li span.wpp-views,
+.widget_popular_ranking .popular-entrys-large-on .wpp-list li span.wpp-views {
+  /* 画像をBase64にするためコメントアウト
+  background: url("images/black-transparent.png") repeat scroll 0 0 transparent; */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyAQMAAAAk8RryAAAAA1BMVEUAAACnej3aAAAAAXRSTlOZyTXzhgAAAA1JREFUGNNjGAWDCgAAAZAAAXtlmk8AAAAASUVORK5CYII=") repeat scroll 0 0 transparent;
+  color:#fff;
+  opacity:1;
+  display:block;
+  right:0;
+  top:0;
+  position:absolute;
+  padding:2px 10px;
+  border-bottom-left-radius:15px;
+  font-size:medium;
+}
