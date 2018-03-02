@@ -1,48 +1,48 @@
 /************************************
 ** 基本設定（General Setting）
 ************************************/
-html, body {
+html {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family:
-      'Hiragino Kaku Gothic ProN',
-      Meiryo, Helvetica, Arial,sans-serif;
-  font-size:16px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Hiragino Kaku Gothic ProN', Meiryo, Helvetica, Arial,sans-serif;
+  font-size: 16px;
   -webkit-text-size-adjust: 100%;
 }
 
-img{
-  border-width:0;
+img {
+  border-width: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-figure,
-main figure{
+figure, main figure {
   margin: 0;
 }
 
-.article{
-  font-size:16px;
-  line-height:170%;
+.article {
+  font-size: 16px;
+  line-height: 170%;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
-/*記事・カテゴリ中の画像を要素内に収める*/
-.article img,
-.category-description img,
-.wp-caption,
-.hover-image{
-  max-width:100%;
-  height:auto;
+.category-description img, .wp-caption, .hover-image {
+  max-width: 100%;
+  height: auto;
 }
 
-.aligncenter{
-  clear:both;
+.aligncenter {
+  clear: both;
 }
 
-.cf:after{
+.cf:after {
   content: "";
   clear: both;
   display: block;

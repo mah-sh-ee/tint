@@ -1,68 +1,91 @@
 /************************************
 ** 入力フォーム（Form）
 ************************************/
-input[type="text"],
-input[type="url"],
-input[type="password"],
-input[type="email"],
-input[type="search"],
-input[type="tel"],
+input {
+  &[type="text"], &[type="url"], &[type="password"], &[type="email"], &[type="search"], &[type="tel"] {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #222;
+    font-size: 16px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    -webkit-transition: border-color 0.15s ease-in-out 0s, -webkit-box-shadow 0.15s ease-in-out 0s;
+    transition: border-color 0.15s ease-in-out 0s, -webkit-box-shadow 0.15s ease-in-out 0s;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s, -webkit-box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
 textarea {
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
   color: #222;
-  /*display: block;*/
   font-size: 16px;
   line-height: 1.42857;
   padding: 6px 12px;
+  -webkit-transition: border-color 0.15s ease-in-out 0s, -webkit-box-shadow 0.15s ease-in-out 0s;
+  transition: border-color 0.15s ease-in-out 0s, -webkit-box-shadow 0.15s ease-in-out 0s;
   transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s, -webkit-box-shadow 0.15s ease-in-out 0s;
   width: 100%;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-input#author,
-input#email,
-input#url{
-  max-width: 360px;
+input {
+  &#author, &#email, &#url {
+    max-width: 360px;
+  }
 }
 
-.gsc-search-box input[type="text"]{
-  background-color:#FFF;
+.gsc-search-box input[type="text"] {
+  background-color: #FFF;
   border-radius: 0px;
 }
 
-#comment-area input[type="text"],
-#comment-area textarea{
-  display: block;
+#comment-area {
+  input[type="text"], textarea {
+    display: block;
+  }
 }
 
 textarea {
   overflow: auto;
-  width:100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-input[type="search"]:focus,
-input[type="url"]:focus,
-input[type="tel"]:focus,
+input {
+  &[type="text"]:focus, &[type="password"]:focus, &[type="email"]:focus, &[type="search"]:focus, &[type="url"]:focus, &[type="tel"]:focus {
+    border: 1px solid #ff69b4;
+    background: #fff;
+    -webkit-box-shadow: 0 0 3px hotpink;
+    box-shadow: 0 0 3px hotpink;
+    color: #444;
+  }
+}
+
 textarea:focus {
   border: 1px solid #ff69b4;
   background: #fff;
-  box-shadow:  0 0 3px rgba(255,105,180,1);
-   color: #444;
+  -webkit-box-shadow: 0 0 3px hotpink;
+  box-shadow: 0 0 3px hotpink;
+  color: #444;
 }
 
-.button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+.button, button {
   display: inline-block;
   margin-bottom: 20px;
   padding: 8px 14px;
@@ -74,19 +97,35 @@ input[type="button"] {
   font-weight: bold;
   line-height: normal;
   cursor: pointer;
-  /* Old browsers */
 }
 
-.button:hover,
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover {
+input {
+  &[type="submit"], &[type="reset"], &[type="button"] {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 14px;
+    border: 1px solid #777;
+    border-radius: 3px;
+    background: #fff;
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: normal;
+    cursor: pointer;
+  }
+}
+
+.button:hover, button:hover {
   background: #eee;
-
 }
 
-select, option{
+input {
+  &[type="submit"]:hover, &[type="reset"]:hover, &[type="button"]:hover {
+    background: #eee;
+  }
+}
+
+select, option {
   padding: 5px;
 }
 
