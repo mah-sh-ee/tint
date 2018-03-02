@@ -1,23 +1,26 @@
 /************************************
 ** Facebookページを「いいね！」するエリアのスタイル
 ************************************/
-div.fb-like-mobile{
+div.fb-like-mobile {
   display: none;
 }
-.article-like{
+
+.article-like {
   height: 100px;
   margin-top: 30px;
   margin-bottom: 30px;
   clear: both;
 }
-.article-like-thumb{
+
+.article-like-thumb {
   float: left;
   width: 100px;
+  img {
+    display: block;
+  }
 }
-.article-like-thumb img{
-  display: block;
-}
-.article-like-body{
+
+.article-like-body {
   margin-right: 140px;
   float: none;
   padding: 10px;
@@ -27,18 +30,20 @@ div.fb-like-mobile{
   overflow: hidden;
   background-color: #fff;
   color: #000;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  &::after {
+    content: '\f054';
+    position: absolute;
+    right: 110px;
+    top: 27px;
+    color: #ccc;
+    font-size: 50px;
+    font-family: FontAwesome;
+    line-height: 100%;
+  }
 }
-.article-like-body::after{
-  content: '\f054';
-  position: absolute;
-  right: 110px;
-  top: 27px;
-  color: #ccc;
-  font-size: 50px;
-  font-family: FontAwesome;
-  line-height: 100%;
-}
+
 .article-like-button {
   background-color: #f3f3f3;
   width: 100px;
@@ -46,17 +51,11 @@ div.fb-like-mobile{
   text-align: center;
   float: right;
   padding-top: 27px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-/*  display: -webkit-flex;
-  display:         flex;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-justify-content: center;
-          justify-content: center;*/
-}
-
-.article-like-button iframe{
-  background-color: #fff;
+  iframe {
+    background-color: #fff;
+  }
 }
 
 .article-like-arrow-box {
@@ -67,63 +66,70 @@ div.fb-like-mobile{
   width: calc(100% - 114px);
   border-radius: 5px;
 }
-.article-like-arrow-box-in{
+
+.article-like-arrow-box-in {
   border-radius: 5px;
   overflow: hidden;
 }
-.article-like-arrow-box:after, .article-like-arrow-box:before {
-  right: 100%;
-  top: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-.article-like-arrow-box:after {
-  border-color: rgba(255, 255, 255, 0);
-  border-right-color: #fff;
-  border-width: 10px;
-  margin-top: -10px;
-}
-.article-like-arrow-box:before {
-  border-color: rgba(221, 221, 221, 0);
-  border-right-color: #bbb;
-  border-width: 11px;
-  margin-top: -11px;
-}
 
+.article-like-arrow-box {
+  &:after, &:before {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #fff;
+    border-width: 10px;
+    margin-top: -10px;
+  }
+  &:before {
+    border-color: rgba(221, 221, 221, 0);
+    border-right-color: #bbb;
+    border-width: 11px;
+    margin-top: -11px;
+  }
+}
 
 /************************************
 ** Facebookページを「いいね！」するエリアのスタイル（サイドバーの時）
 ************************************/
-#sidebar .article-like-body::after{
-  display: none;
-}
-#sidebar .article-like-body{
-  font-size: 0.8em;
-  padding: 5px;
-  line-height: 1.1em;
-  margin-right: 0;
-  height: 70px;
-}
-#sidebar .article-like-arrow-box{
-  height: 100px;
-}
-#sidebar .article-like-button{
-  float: none;
-  width: 100%;
-  height: 30px;
-  display: block;
-  line-height: 24px;
-  padding-top: 0;
-}
-#sidebar div.fb-like-mobile{
-  display: block;
-}
-#sidebar div.fb-like-pc{
-  display: none;
+#sidebar {
+  .article-like-body {
+    &::after {
+      display: none;
+    }
+    font-size: 0.8em;
+    padding: 5px;
+    line-height: 1.1em;
+    margin-right: 0;
+    height: 70px;
+  }
+  .article-like-arrow-box {
+    height: 100px;
+  }
+  .article-like-button {
+    float: none;
+    width: 100%;
+    height: 30px;
+    display: block;
+    line-height: 24px;
+    padding-top: 0;
+  }
+  div {
+    &.fb-like-mobile {
+      display: block;
+    }
+    &.fb-like-pc {
+      display: none;
+    }
+  }
 }
 
 /************************************
@@ -134,22 +140,19 @@ div.fb-like-mobile{
 ** 購読者数つきFeedlyボタン（縦型）
 ************************************/
 #feedly-followers {
-    display: block;
-}
-
-#feedly-followers a{
   display: block;
+  a {
+    display: block;
+  }
+  img {
+    width: 72px;
+    height: 22px;
+    border: none;
+  }
 }
 
-#feedly-followers img{
-    width:72px;
-    height:22px;
-    border:none;
-}
-
-/* 購読者数の表示部分 */
 #feedly-count {
-  margin:0 auto 6px auto;
+  margin: 0 auto 6px auto;
   width: 62px;
   height: 31px;
   background-color: #FFF;
@@ -162,91 +165,89 @@ div.fb-like-mobile{
   line-height: 31px;
   text-align: center;
   display: block;
+  a {
+    color: #222;
+    text-decoration: none;
+  }
 }
 
-#feedly-count a{
-  color:#222;
-  text-decoration:none;
-}
-
-/* 購読者数吹き出し部分 */
-.fdly-count:after,
-.fdly-count:before {
-  border: solid transparent;
-  content: ' ';
-  right: 43%;
-  position: absolute;
-}
-
-.fdly-count:before {
-  border-width: 5px;
-  border-top-color: #B0C1D8;
-  top: 32px;
-}
-
-.fdly-count:after {
-  border-width: 5px;
-  border-top-color: #FFF;
-  top: 30px;
+.fdly-count {
+  &:after {
+    border: solid transparent;
+    content: ' ';
+    right: 43%;
+    position: absolute;
+  }
+  &:before {
+    border: solid transparent;
+    content: ' ';
+    right: 43%;
+    position: absolute;
+    border-width: 5px;
+    border-top-color: #B0C1D8;
+    top: 32px;
+  }
+  &:after {
+    border-width: 5px;
+    border-top-color: #FFF;
+    top: 30px;
+  }
 }
 
 /************************************
 ** 購読者数つきFeedlyボタン（横型）
 ************************************/
-.feedly-btn-horizontal img#feedly-follow{
-  width:60px;
-  height:20px;
-  border:0;
-  margin-right:3px;
-}
-
-.feedly-btn-horizontal .arrow_box {
-  position: relative;
-  background: #fff;
-  border: 1px solid #BDBDBD;
-  padding: 0 6px;
-  border-radius:3px;
-  top:-7px;
-  line-height:18px;
-  display:inline-block;
-  height:22px;
-}
-
-.feedly-btn-horizontal a{
-  color:#222;
-  font-size:11px;
-  text-decoration:none;
-  line-height:18px;
-}
-
-.feedly-btn-horizontal a:hover{
-  color:#222;
-}
-
-.feedly-btn-horizontal .arrow_box:after,
-.feedly-btn-horizontal .arrow_box:before {
-  right: 100%;
-  top: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-.feedly-btn-horizontal .arrow_box:after {
-  border-color: rgba(255, 255, 255, 0);
-  border-right-color: #fff;
-  border-width: 3px;
-  margin-top: -3px;
-}
-
-.feedly-btn-horizontal .arrow_box:before {
-  border-color: rgba(189, 189, 189, 0);
-  border-right-color: #BDBDBD;
-  border-width: 4px;
-  margin-top: -4px;
+.feedly-btn-horizontal {
+  img#feedly-follow {
+    width: 60px;
+    height: 20px;
+    border: 0;
+    margin-right: 3px;
+  }
+  .arrow_box {
+    position: relative;
+    background: #fff;
+    border: 1px solid #BDBDBD;
+    padding: 0 6px;
+    border-radius: 3px;
+    top: -7px;
+    line-height: 18px;
+    display: inline-block;
+    height: 22px;
+  }
+  a {
+    color: #222;
+    font-size: 11px;
+    text-decoration: none;
+    line-height: 18px;
+    &:hover {
+      color: #222;
+    }
+  }
+  .arrow_box {
+    &:after, &:before {
+      right: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+    }
+    &:after {
+      border-color: rgba(255, 255, 255, 0);
+      border-right-color: #fff;
+      border-width: 3px;
+      margin-top: -3px;
+    }
+    &:before {
+      border-color: rgba(189, 189, 189, 0);
+      border-right-color: #BDBDBD;
+      border-width: 4px;
+      margin-top: -4px;
+    }
+  }
 }
 /************************************
 ** SNSに関するスタイルシートの設定
@@ -255,13 +256,13 @@ div.fb-like-mobile{
 /************************************
 ** SNSシェアボタン
 ************************************/
-#sns-group{
+#sns-group {
   clear: both;
 }
 
-ul.snsb{
-  padding:10px 0;
-  margin-bottom:0;
+ul.snsb {
+  padding: 10px 0;
+  margin-bottom: 0;
   font-family: sans-serif;
 }
 
@@ -273,167 +274,175 @@ ul.snsb{
   margin-bottom: 5px;
 }
 
-ul.snsbs li{
-  margin-right:5px;
-  margin-bottom:5px;
+ul.snsbs {
+  li {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 25px;
+      background-color: #000;
+      display: block;
+      padding: 7px 6px 3px 6px;
+      border-radius: 5px;
+      width: 25px;
+      height: 30px;
+      position: relative;
+      text-align: center;
+      .social-count {
+        font-size: 10px;
+        background-color: #555;
+        width: auto;
+        padding: 1px 3px;
+        border-radius: 5px;
+        position: absolute;
+        display: inline-block;
+        right: 0;
+        bottom: 0;
+        height: 12px;
+        line-height: 12px;
+        font-family: Arial;
+      }
+    }
+  }
+  a {
+    &.twitter-btn-icon-link {
+      background-color: #55acee;
+    }
+    &.facebook-btn-icon-link {
+      background-color: #3b5998;
+    }
+    &.google-plus-btn-icon-link {
+      background-color: #dd4b39;
+    }
+    &.hatena-btn-icon-link {
+      background-color: #3C7DD1;
+    }
+    &.pocket-btn-icon-link {
+      background-color: #EE4257;
+    }
+    &.line-btn-icon-link {
+      background-color: #00c300;
+    }
+    &.evernote-btn-icon-link {
+      background-color: #51b125;
+    }
+    &.feedly-btn-icon-link {
+      background-color: #87bd33;
+    }
+    &.push7-btn-icon-link {
+      background-color: #eeac00;
+    }
+    &.comments-btn-icon-link {
+      background-color: #555;
+      padding-top: 4px;
+      padding-bottom: 6px;
+    }
+  }
 }
 
-ul.snsbs li a{
-  color:#fff;
-  text-decoration:none;
-  font-size:25px;
-  background-color:#000;
-  display:block;
-  padding:7px 6px 3px 6px;
-  border-radius:5px;
-  width:25px;
-  height:30px;
-  position:relative;
-  text-align: center;
+.snsbs li {
+  a:hover {
+    opacity: 0.7;
+  }
+  img {
+    border-radius: 10px;
+  }
 }
 
-ul.snsbs li a .social-count{
-  font-size:10px;
-  background-color:#555;
-  width:auto;
-  padding:1px 3px;
-  border-radius:5px;
-  position:absolute;
-  display:inline-block;
-  right:0;
-  bottom:0;
-  height:12px;
-  line-height:12px;
-  font-family: Arial;
-}
-
-ul.snsbs a.twitter-btn-icon-link{background-color:#55acee;}
-ul.snsbs a.facebook-btn-icon-link{background-color:#3b5998;}
-ul.snsbs a.google-plus-btn-icon-link{background-color:#dd4b39;}
-ul.snsbs a.hatena-btn-icon-link{background-color:#3C7DD1;}
-ul.snsbs a.pocket-btn-icon-link{background-color:#EE4257;}
-ul.snsbs a.line-btn-icon-link{background-color:#00c300;}
-ul.snsbs a.evernote-btn-icon-link{background-color:#51b125;}
-ul.snsbs a.feedly-btn-icon-link{background-color:#87bd33;}
-ul.snsbs a.push7-btn-icon-link{background-color:#eeac00;}
-ul.snsbs a.comments-btn-icon-link{
-  background-color:#555;
-  padding-top: 4px;
-  padding-bottom: 6px;
-}
-
-
-.snsbs li a:hover{
-  opacity: 0.7;
-}
-
-.snsbs li img {
-  border-radius:10px;
-}
-img.line-btn-img{
-  height:62px;
-}
-
-img.line-btn-img-mini{
-  display:none;
-}
-
-img.evernote-btn-img{
-  min-height:62px;
-}
-
-img.evernote-btn-img-mini{
-  display:none;
+img {
+  &.line-btn-img {
+    height: 62px;
+  }
+  &.line-btn-img-mini {
+    display: none;
+  }
+  &.evernote-btn-img {
+    min-height: 62px;
+  }
+  &.evernote-btn-img-mini {
+    display: none;
+  }
 }
 
 /************************************
 ** タイトル下SNSボタン
 ************************************/
-#sns-group-top ul{
-  padding:0;
-  line-height:20px;
-}
-
-#sns-group-top ul li{
-  margin-top: 2px;
-  margin-bottom: 2px;
-}
-
-#sns-group-top .sns-share-msg{
-  display:none;
-}
-
-#sns-group-top .twitter-btn{
-  width:100px;
-}
-
-#sns-group-top .facebook-btn{
-  width: 127px;
-}
-
-#sns-group-top .google-plus-btn{
-  width: 65px;
-  margin-top:-2px;
-}
-
-#sns-group-top .pocket-btn{
-  width:90px;
-}
-
-#sns-group-top img.line-btn-img{
-  display:none;
-}
-
-#sns-group-top img.line-btn-img-mini{
-  display:block;
-  height: 20px;
-}
-
-#sns-group-top .evernote-btn-img{
-  display:none;
-}
-
-#sns-group-top .evernote-btn-img-mini{
-  display:block;
-}
-
-#sns-group-top .evernote-btn-img-mini{
-  height:20px;
-  width:auto;
+#sns-group-top {
+  ul {
+    padding: 0;
+    line-height: 20px;
+    li {
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
+  }
+  .sns-share-msg {
+    display: none;
+  }
+  .twitter-btn {
+    width: 100px;
+  }
+  .facebook-btn {
+    width: 127px;
+  }
+  .google-plus-btn {
+    width: 65px;
+    margin-top: -2px;
+  }
+  .pocket-btn {
+    width: 90px;
+  }
+  img {
+    &.line-btn-img {
+      display: none;
+    }
+    &.line-btn-img-mini {
+      display: block;
+      height: 20px;
+    }
+  }
+  .evernote-btn-img {
+    display: none;
+  }
+  .evernote-btn-img-mini {
+    display: block;
+    height: 20px;
+    width: auto;
+  }
 }
 
 /************************************
 ** SNSページフォロー
 ************************************/
-.sns-follow-msg{
+.sns-follow-msg {
   margin: 8px 0 0 0;
-  font-size:medium;
+  font-size: medium;
 }
 
-.sns-share-msg{
-  margin-bottom:-20px;
-  font-size:medium;
+.sns-share-msg {
+  margin-bottom: -20px;
+  font-size: medium;
 }
 
-#header .sns-follow-msg{
-  display:none;
+#header .sns-follow-msg {
+  display: none;
 }
 
-ul.snsp{
-  list-style:none;
-  padding-left:0;
-  margin:10px 0 15px;
-}
-
-ul.snsp li{
-  display:inline;
-  margin-right:5px;
-}
-
-ul.snsp li a{
-  font-size:19px;
-  line-height:170%;
-  text-decoration:none;
+ul.snsp {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0 15px;
+  li {
+    display: inline;
+    margin-right: 5px;
+    a {
+      font-size: 19px;
+      line-height: 170%;
+      text-decoration: none;
+    }
+  }
 }
 
 /*ul.snsp li.push7-page a span {
@@ -457,98 +466,78 @@ ul.snsp li.push7-page a{
 
 /*Facebookコメント欄が表示されない不具合修正*/
 .fb-like iframe {
-    max-width: none;
+  max-width: none;
 }
-
 /*アイコフォントの大きさ*/
 ul.snsp li {
   display: inline-block;
   margin-right: 5px;
+  a {
+    text-decoration: none;
+    span {
+      display: block;
+      font-size: 33px;
+      width: 33px;
+      height: 33px;
+      overflow: hidden;
+      border-radius: 4px;
+      background-color: #666;
+      color: #fff;
+      &.icon-feedly-square, &.icon-line-square, &.icon-push7-square, &.icon-hatebu-square {
+        font-size: 34px;
+        position: relative;
+      }
+    }
+  }
 }
-
-ul.snsp li a {
-  text-decoration: none;
-}
-
-ul.snsp li a span {
-  display: block;
-  font-size: 33px;
-  width: 33px;
-  height: 33px;
-  overflow: hidden;
-  border-radius: 4px;
-  background-color: #666;
+#sns-group ul.snsp li a:hover {
   color: #fff;
 }
 
-/*feedly、LINEアイコンは自作なので少し大きかったので調整*/
-ul.snsp li a span.icon-feedly-square,
-ul.snsp li a span.icon-line-square,
-ul.snsp li a span.icon-push7-square,
-ul.snsp li a span.icon-hatebu-square{
-  font-size:34px;
-  position: relative;
-}
-
-#sns-group ul.snsp li a:hover{
-  color: #fff;
-}
-
-ul.snsp li.twitter-page a span:hover{
-  background-color:#55acee;
-}
-
-ul.snsp li.facebook-page a span:hover{
-  background-color:#3b5998;
-}
-
-ul.snsp li.google-plus-page a span:hover{
-  background-color:#dd4b39;
-}
-
-ul.snsp li.instagram-page a span:hover{
-  background-color:#3f729b;
-}
-
-ul.snsp li.hatebu-page a span:hover{
-  background-color:#008fde;
-}
-
-ul.snsp li.pinterest-page a span:hover{
-  background-color:#cc2127;
-}
-
-ul.snsp li.youtube-page a span:hover{
-  background-color:#e52d27;
-}
-
-ul.snsp li.flickr-page a span:hover{
-  background-color:#1d1d1b;
-}
-
-ul.snsp li.feedly-page a span:hover{
-  background-color:#87bd33;
-}
-
-ul.snsp li.push7-page a span:hover{
-  background-color: #eeac00;
-}
-
-ul.snsp li.line-page a span:hover{
-  background-color:#00c300;
-}
-
-ul.snsp li.rss-page a span:hover{
-  background-color:#fe9900;
-}
-
-
-ul.snsp li.feedly-page a img{
-  margin-bottom:-3px;
-  width:32.5px;
-  height:32.5px;
-  border-radius:7px;
-  border-width:0px;
+ul.snsp li {
+  &.twitter-page a span:hover {
+    background-color: #55acee;
+  }
+  &.facebook-page a span:hover {
+    background-color: #3b5998;
+  }
+  &.google-plus-page a span:hover {
+    background-color: #dd4b39;
+  }
+  &.instagram-page a span:hover {
+    background-color: #3f729b;
+  }
+  &.hatebu-page a span:hover {
+    background-color: #008fde;
+  }
+  &.pinterest-page a span:hover {
+    background-color: #cc2127;
+  }
+  &.youtube-page a span:hover {
+    background-color: #e52d27;
+  }
+  &.flickr-page a span:hover {
+    background-color: #1d1d1b;
+  }
+  &.feedly-page a span:hover {
+    background-color: #87bd33;
+  }
+  &.push7-page a span:hover {
+    background-color: #eeac00;
+  }
+  &.line-page a span:hover {
+    background-color: #00c300;
+  }
+  &.rss-page a span:hover {
+    background-color: #fe9900;
+  }
+  &.feedly-page a img {
+    margin-bottom: -3px;
+    width: 32.5px;
+    height: 32.5px;
+    border-radius: 7px;
+    border-width: 0px;
+  }
 }
 
 /************************************
@@ -561,200 +550,211 @@ ul.snsp li.feedly-page a img{
   padding: 0;
   text-align: center;
   z-index: 99;
-  margin-left:-110px;
-  margin-top:-50px;
-  width:90px;
+  margin-left: -110px;
+  margin-top: -50px;
+  width: 90px;
   position: fixed;
+  ul {
+    li {
+      display: block;
+      margin: 5px;
+      overflow: hidden;
+      padding: 0;
+      text-align: center;
+      float: none;
+      div {
+        margin: auto;
+      }
+    }
+    &.snsb-balloon li {
+      margin-left: 15px;
+      margin-bottom: 10px;
+    }
+  }
+  li.comments-balloon-btn {
+    margin-left: 15px;
+    margin-bottom: 10px;
+  }
+  .sns-share-msg {
+    display: none;
+  }
 }
-
-#sharebar ul li{
-  display: block;
-  margin: 5px;
-  overflow: hidden;
-  padding: 0;
-  text-align: center;
-  float:none;
-}
-
-#sharebar ul li div{
-  margin: auto;
-}
-
-#sharebar ul.snsb-balloon li,
-#sharebar li.comments-balloon-btn{
-  margin-left:15px;
-  margin-bottom:10px;
-}
-
-#sharebar .sns-share-msg{
-  display:none;
-}
-
 /************************************
 ** 自作のバルーンシェアボタン
 ************************************/
-.balloon-btn-set{
-  display:block;
-  width:60px;
-  height:63px;
+.balloon-btn-set {
+  display: block;
+  width: 60px;
+  height: 63px;
+  a {
+    display: block;
+    color: #777;
+    font-size: 14px;
+    text-decoration: none;
+    &.twitter-arrow-box-link .fa-comments {
+      color: #aaa;
+      font-size: 13px;
+    }
+  }
 }
 
-.balloon-btn-set a{
-  display:block;
-  color:#777;
-  font-size:14px;
-  text-decoration:none;
-
+a {
+  &.arrow-box-link {
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial;
+    display: block;
+    font-size: 14px;
+  }
+  &.evernote-arrow-box-link {
+    font-weight: normal;
+  }
+  &.arrow-box-link:hover {
+    color: #555;
+  }
+  &.balloon-btn-link {
+    border: 1px solid #ddd;
+    width: 58px;
+    height: 20px;
+    line-height: 22px;
+    position: relative;
+    top: 4px;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    display: block;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &.twitter-balloon-btn-link {
+    background-color: #55acee;
+  }
+  &.facebook-balloon-btn-link {
+    background-color: #3c5a99;
+  }
+  &.googleplus-balloon-btn-link {
+    background-color: #dd4b39;
+  }
+  &.hatena-balloon-btn-link {
+    background-color: #3c7dd1;
+  }
+  &.pocket-balloon-btn-link {
+    background-color: #ee4257;
+  }
+  &.line-balloon-btn-link {
+    background-color: #00c300;
+  }
+  &.evernote-balloon-btn-link {
+    background-color: #51b125;
+  }
+  &.feedly-balloon-btn-link {
+    background-color: #87bd33;
+  }
+  &.push7-balloon-btn-link {
+    background-color: #eeac00;
+  }
+  &.comments-balloon-btn-link {
+    background-color: #222;
+    .fa-comment {
+      position: relative;
+      top: -3px;
+    }
+  }
 }
-
-.balloon-btn-set a.twitter-arrow-box-link .fa-comments{
-  color: #aaa;
-  font-size: 13px;
-}
-
-a.arrow-box-link{
-  font-weight:bold;
-  text-align:center;
-  font-family: Arial;
-  display:block;
-  font-size: 14px;
-}
-
-a.evernote-arrow-box-link{
-  /*font-family: 'Boogaloo', cursive;*/
-  font-weight:normal;
-}
-
-a.arrow-box-link:hover{color:#555;}
-
-a.balloon-btn-link{
-  border:1px solid #ddd;
-  width:58px;
-  height:20px;
-  line-height:22px;
-  position:relative;
-  top:4px;
-  color:white;
-  border-radius:3px;
-  text-align:center;
-  display:block;
-}
-
-a.balloon-btn-link:hover{
-  opacity:0.7;
-}
-
-a.twitter-balloon-btn-link{background-color:#55acee;}
-a.facebook-balloon-btn-link{background-color:#3c5a99;}
-a.googleplus-balloon-btn-link{background-color:#dd4b39;}
-a.hatena-balloon-btn-link{background-color:#3c7dd1;}
-a.pocket-balloon-btn-link{background-color:#ee4257;}
-a.line-balloon-btn-link{background-color:#00c300;}
-a.evernote-balloon-btn-link{background-color:#51b125;}
-a.feedly-balloon-btn-link{background-color:#87bd33;}
-a.push7-balloon-btn-link{background-color:#eeac00;}
-a.comments-balloon-btn-link{background-color:#222;}
-
-a.comments-balloon-btn-link .fa-comment{position: relative;top:-3px;}
 
 .arrow-box {
   position: relative;
   background: #fff;
   border: 1px solid #bbb;
-  text-align:center;
-  width:58px;
-  height:33px;
-  border-radius:3px;
-  line-height:33px;
-  display:inline-block;
-}
-
-.arrow-box:after,
-.arrow-box:before {
-  top: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-.arrow-box:after {
-  border-color: rgba(255, 255, 255, 0);
-  border-top-color: #fff;
-  border-width: 3px;
-  margin-left: -3px;
-}
-.arrow-box:before {
-  border-color: rgba(187, 187, 187, 0);
-  border-top-color: #ddd;
-  border-width: 5px;
-  margin-left: -5px;
+  text-align: center;
+  width: 58px;
+  height: 33px;
+  border-radius: 3px;
+  line-height: 33px;
+  display: inline-block;
+  &:after, &:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #fff;
+    border-width: 3px;
+    margin-left: -3px;
+  }
+  &:before {
+    border-color: rgba(187, 187, 187, 0);
+    border-top-color: #ddd;
+    border-width: 5px;
+    margin-left: -5px;
+  }
 }
 
 /************************************
 ** タイトル下SNSボタン
 ************************************/
 .page #sns-group-top {
-    display: none;
+  display: none;
 }
 
-#sns-group-top .balloon-btn-set{
-  display:block;
-  width:87px;
-  height:22px;
-  margin-bottom:10px;
-}
-
-#sns-group-top .arrow-box{
-  height:20px;
-  width:50px;
-  line-height:20px;
-  float:right;
-}
-
-#sns-group-top .arrow-box-link{
-  line-height:20px;
-  text-align:center;
-}
-
-#sns-group-top .balloon-btn-link{
-  top:0;
-  width:28px;
-  float:left;
-  line-height:24px;
-}
-
-#sns-group-top .arrow-box {
-  position: relative;
-  background: #fff;
-  border: 1px solid #bbb;
-}
-#sns-group-top .arrow-box:after,
-#sns-group-top .arrow-box:before {
-  right: 100%;
-  top: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  left:auto;
-  position: absolute;
-  pointer-events: none;
-}
-#sns-group-top .arrow-box:after {
-  border-color: rgba(255, 255, 255, 0);
-  border-right-color: #fff;
-  border-width: 3px;
-  margin-top: -3px;
-}
-#sns-group-top .arrow-box:before {
-  border-color: rgba(119, 119, 119, 0);
-  border-right-color: #bbb;
-  border-width: 4px;
-  margin-top: -4px;
+#sns-group-top {
+  .balloon-btn-set {
+    display: block;
+    width: 87px;
+    height: 22px;
+    margin-bottom: 10px;
+  }
+  .arrow-box {
+    height: 20px;
+    width: 50px;
+    line-height: 20px;
+    float: right;
+  }
+  .arrow-box-link {
+    line-height: 20px;
+    text-align: center;
+  }
+  .balloon-btn-link {
+    top: 0;
+    width: 28px;
+    float: left;
+    line-height: 24px;
+  }
+  .arrow-box {
+    position: relative;
+    background: #fff;
+    border: 1px solid #bbb;
+    &:after, &:before {
+      right: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      left: auto;
+      position: absolute;
+      pointer-events: none;
+    }
+    &:after {
+      border-color: rgba(255, 255, 255, 0);
+      border-right-color: #fff;
+      border-width: 3px;
+      margin-top: -3px;
+    }
+    &:before {
+      border-color: rgba(119, 119, 119, 0);
+      border-right-color: #bbb;
+      border-width: 4px;
+      margin-top: -4px;
+    }
+  }
 }
 
 /************************************
@@ -773,196 +773,178 @@ a.comments-balloon-btn-link .fa-comment{position: relative;top:-3px;}
 /************************************
 ** バイラルボタン
 ************************************/
-.sns-group-viral ul.snsb{
-  box-sizing: border-box;
+.sns-group-viral {
+  ul {
+    &.snsb {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      li {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 24%;
+        margin-right: 1%;
+        a {
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          width: 100%;
+          height: 45px;
+          border-radius: 3px;
+          margin-bottom: 5px;
+          text-align: center;
+          vertical-align: middle;
+          font-size: 16px;
+          line-height: 35px;
+        }
+      }
+    }
+    &.snsbs li a .social-count {
+      font-size: 12px;
+      bottom: 2px;
+      font-weight: bold;
+      background-color: transparent;
+    }
+  }
+  .social-icon:after {
+    margin-left: 7px;
+    position: relative;
+    top: -2px;
+    font-family: arial;
+  }
+  .fa-comment:after {
+    top: 0;
+  }
+  .icon-twitter:after {
+    content: 'Twitter';
+  }
+  .icon-facebook:after {
+    content: 'Facebook';
+  }
+  .icon-googleplus:after {
+    content: 'Google+';
+  }
+  .icon-hatena:after {
+    content: 'Hatena';
+  }
+  .icon-pocket:after {
+    content: 'Pocket';
+  }
+  .icon-line:after {
+    content: 'Line';
+  }
+  .icon-evernote:after {
+    content: 'Evernote';
+  }
+  .icon-feedly:after {
+    content: 'Feedly';
+  }
+  .icon-push7:after {
+    content: 'Push';
+  }
+  .fa-comment:after {
+    content: 'Comment';
+  }
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    &.snsb li a {
+      background-color: #fff;
+      border: 3px solid #ccc;
+      color: #ccc;
+      line-height: 32px;
+      vertical-align: top;
+      padding-top: 2px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-bottom: 5px;
+      span.social-icon {
+        font-weight: bold;
+        vertical-align: middle;
+      }
+    }
+  }
 }
 
-.sns-group-viral ul.snsb li{
-  box-sizing: border-box;
-  width: 24%;
-  margin-right: 1%;
-}
-
-.sns-group-viral ul.snsb li a{
-  box-sizing: border-box;
-  width: 100%;
-  height: 45px;
-  border-radius: 3px;
-  margin-bottom: 5px;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 16px;
-  line-height: 35px;
-}
-
-.sns-group-viral ul.snsbs li a .social-count{
-  font-size: 12px;
-  bottom: 2px;
-  font-weight: bold;
-  background-color: transparent;
-}
-
-.sns-group-viral .social-icon:after{
-  margin-left: 7px;
-  position: relative;
-  top: -2px;
-  font-family: arial;
-}
-
-.sns-group-viral .fa-comment:after{
-  top: 0;
-}
-
-
-.sns-group-viral .icon-twitter:after{
-  content: 'Twitter';
-}
-
-.sns-group-viral .icon-facebook:after{
-  content: 'Facebook';
-}
-
-.sns-group-viral .icon-googleplus:after{
-  content: 'Google+';
-}
-
-.sns-group-viral .icon-hatena:after{
-  content: 'Hatena';
-}
-
-.sns-group-viral .icon-pocket:after{
-  content: 'Pocket';
-}
-
-.sns-group-viral .icon-line:after{
-  content: 'Line';
-}
-
-.sns-group-viral .icon-evernote:after{
-  content: 'Evernote';
-}
-
-.sns-group-viral .icon-feedly:after{
-  content: 'Feedly';
-}
-
-.sns-group-viral .icon-push7:after{
-  content: 'Push';
-}
-
-.sns-group-viral .fa-comment:after{
-  content: 'Comment';
-}
-.sns-group-viral ul {
- display: flex;
-}
-
-/*白抜きバイラルボタン*/
-
-.sns-group-viral ul.snsb li a{
-  background-color: #fff;
-  border: 3px solid #ccc;
-  color: #ccc;
-  line-height: 32px;
-  vertical-align: top;
-  padding-top:2px;
-  padding-left:5px;
-  padding-right:5px;
-  padding-bottom:5px;
-}
-
-.sns-group-viral ul.snsb li a span.social-icon{
-  font-weight: bold;
-  vertical-align: middle;
-}
-
-div.sns-group-viral ul.snsb li a:hover{
+div.sns-group-viral ul.snsb li a:hover {
   color: #fff;
   opacity: 1;
 }
 
 #sharebar .sns-group-viral ul.snsb li a {
-    width: 80px;
+  width: 80px;
 }
 
-.sns-group-viral ul.snsbs li a.twitter-btn-icon-link {
+.sns-group-viral ul.snsbs li a {
+  &.twitter-btn-icon-link {
     color: #55acee;
     border-color: #55acee;
-}
-.sns-group-viral ul.snsbs li a.twitter-btn-icon-link:hover {
-    background-color: #55acee;
-}
-
-.sns-group-viral ul.snsbs li a.facebook-btn-icon-link {
+    &:hover {
+      background-color: #55acee;
+    }
+  }
+  &.facebook-btn-icon-link {
     color: #3b5998;
     border-color: #3b5998;
-}
-.sns-group-viral ul.snsbs li a.facebook-btn-icon-link:hover {
-    background-color: #3b5998;
-}
-
-.sns-group-viral ul.snsbs li a.google-plus-btn-icon-link {
+    &:hover {
+      background-color: #3b5998;
+    }
+  }
+  &.google-plus-btn-icon-link {
     color: #dd4b39;
     border-color: #dd4b39;
-}
-.sns-group-viral ul.snsbs li a.google-plus-btn-icon-link:hover {
-    background-color: #dd4b39;
-}
-
-.sns-group-viral ul.snsbs li a.hatena-btn-icon-link {
+    &:hover {
+      background-color: #dd4b39;
+    }
+  }
+  &.hatena-btn-icon-link {
     color: #3c7dd1;
     border-color: #3c7dd1;
-}
-.sns-group-viral ul.snsbs li a.hatena-btn-icon-link:hover {
-    background-color: #3c7dd1;
-}
-
-.sns-group-viral ul.snsbs li a.pocket-btn-icon-link {
+    &:hover {
+      background-color: #3c7dd1;
+    }
+  }
+  &.pocket-btn-icon-link {
     color: #ee4257;
     border-color: #ee4257;
-}
-.sns-group-viral ul.snsbs li a.pocket-btn-icon-link:hover {
-    background-color: #ee4257;
-}
-
-.sns-group-viral ul.snsbs li a.line-btn-icon-link {
+    &:hover {
+      background-color: #ee4257;
+    }
+  }
+  &.line-btn-icon-link {
     color: #00c300;
     border-color: #00c300;
-}
-.sns-group-viral ul.snsbs li a.line-btn-icon-link:hover {
-    background-color: #00c300;
-}
-
-.sns-group-viral ul.snsbs li a.evernote-btn-icon-link {
+    &:hover {
+      background-color: #00c300;
+    }
+  }
+  &.evernote-btn-icon-link {
     color: #51b125;
     border-color: #51b125;
-}
-.sns-group-viral ul.snsbs li a.evernote-btn-icon-link:hover {
-    background-color: #51b125;
-}
-
-.sns-group-viral ul.snsbs li a.feedly-btn-icon-link {
+    &:hover {
+      background-color: #51b125;
+    }
+  }
+  &.feedly-btn-icon-link {
     color: #87bd33;
     border-color: #87bd33;
-}
-.sns-group-viral ul.snsbs li a.feedly-btn-icon-link:hover {
-    background-color: #87bd33;
-}
-
-.sns-group-viral ul.snsbs li a.push7-btn-icon-link {
+    &:hover {
+      background-color: #87bd33;
+    }
+  }
+  &.push7-btn-icon-link {
     color: #eeac00;
     border-color: #eeac00;
-}
-.sns-group-viral ul.snsbs li a.push7-btn-icon-link:hover {
-    background-color: #eeac00;
-}
-
-.sns-group-viral ul.snsbs li a.comments-btn-icon-link {
+    &:hover {
+      background-color: #eeac00;
+    }
+  }
+  &.comments-btn-icon-link {
     color: #555;
     border-color: #555;
-}
-.sns-group-viral ul.snsbs li a.comments-btn-icon-link:hover {
-    background-color: #555;
+    &:hover {
+      background-color: #555;
+    }
+  }
 }
 
 
@@ -970,96 +952,128 @@ div.sns-group-viral ul.snsb li a:hover{
 /************************************
 ** バイラルボタン（シェアバー）
 ************************************/
-#sharebar .sns-group-viral ul.snsb li{
-  width: 100%;
+#sharebar .sns-group-viral {
+  ul.snsb li {
+    width: 100%;
+    a {
+      width: 80px;
+    }
+  }
+  .social-icon:after {
+    display: none;
+  }
 }
 
-#sharebar .sns-group-viral ul.snsb li a{
-  width: 80px;
-}
-
-#sharebar .sns-group-viral .social-icon:after{
-  display: none;
-}
 
 /************************************
 ** とりあえず何でもレスポンシブ化するスタイル
 ************************************/
-img,canvas,iframe,video,svg{max-width:100%}.overflow-container{overflow-y:scroll}.aspect-ratio{height:0;padding-top:56.25%;position:relative}.aspect-ratio--object{bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%;z-index:100}
+img, canvas, iframe, video, svg {
+  max-width: 100%;
+}
+
+.overflow-container {
+  overflow-y: scroll;
+}
+
+.aspect-ratio {
+  height: 0;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.aspect-ratio--object {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
 
 /************************************
 ** 外部パーツ微調整
 ************************************/
 /*外部パーツの微調整など*/
 /*SimplicityでbbPressのスタイルを整える*/
-.bbp-breadcrumb-home,
-.bbp-breadcrumb-home+.bbp-breadcrumb-sep,
-.topic .post-date,
-.topic .post-update,
-.topic .footer-post-meta,
-.post-0 .post-date,
-.post-0 .post-update,
-.post-0 .footer-post-meta,
-.forum .post-date,
-.forum .post-update,
-.forum .footer-post-meta{
+.bbp-breadcrumb-home {
   display: none;
+  + .bbp-breadcrumb-sep {
+    display: none;
+  }
 }
 
-#bbp_search{
+.topic {
+  .post-date, .post-update, .footer-post-meta {
+    display: none;
+  }
+}
+
+.post-0 {
+  .post-date, .post-update, .footer-post-meta {
+    display: none;
+  }
+}
+
+.forum {
+  .post-date, .post-update, .footer-post-meta {
+    display: none;
+  }
+}
+
+#bbp_search {
   font-size: 17px;
 }
 
-#bbp_search_submit{
-  padding-top:9px;
-  padding-bottom:9px;
+#bbp_search_submit {
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 
-.post-0 .post-meta{
+.post-0 .post-meta {
   height: 27px;
 }
 
-.bbp-reply-content{
+.bbp-reply-content {
   font-size: 16px;
   line-height: 170%;
 }
 
-.bbp-forum-title{
+.bbp-forum-title {
   font-size: 16px;
 }
 
-.bbp-topic-permalink{
+.bbp-topic-permalink {
   font-size: 14px;
 }
 
-#main #bbpress-forums .status-closed{
+#main #bbpress-forums .status-closed {
   color: #000;
   background-color: #fcfcfc;
+  a {
+    color: #2098a8;
+  }
+  li.bbp-topic-title a {
+    color: #222;
+  }
 }
 
-#main #bbpress-forums .status-closed a {
-  color: #2098a8;
+#bbp-container .entry-content {
+  margin-left: 0;
 }
 
-#main #bbpress-forums .status-closed li.bbp-topic-title a{
-  color: #222;
+.bbp-form > {
+  p, div {
+    text-align: left;
+  }
 }
 
-#bbp-container .entry-content{
-  margin-left:0;
+#bbp_reply_content, #bbp_topic_content {
+  border: 1px solid #ccc;
 }
 
-.bbp-form > p,
-.bbp-form > div{
-  text-align: left;
-}
-
-#bbp_reply_content,
-#bbp_topic_content{
-  border:1px solid #ccc;
-}
-
-/*bbResolutions*/
 .bbr-form-wrapper {
   clear: left;
 }
@@ -1071,142 +1085,125 @@ img,canvas,iframe,video,svg{max-width:100%}.overflow-container{overflow-y:scroll
   top: 5px;
 }
 
-.bbr-resolution-sticker{
-
-}
-@media screen and (max-width: 440px){
-  #main #bbpress-forums div.bbp-forum-content,
-  #main #bbpress-forums div.bbp-topic-content,
-  #main #bbpress-forums div.bbp-reply-content{
-    margin-left: 10px;
+@media screen and (max-width: 440px) {
+  #main #bbpress-forums div {
+    &.bbp-forum-content, &.bbp-topic-content, &.bbp-reply-content {
+      margin-left: 10px;
+    }
   }
 }
 
-@media screen and (max-width: 480px){
-  .article #bbpress-forums .bbp-body div.bbp-reply-author{
-    padding-left: 0;
-    margin-top: 10px;
-    line-height: 130%;
+@media screen and (max-width: 480px) {
+  .article #bbpress-forums {
+    .bbp-body div.bbp-reply-author {
+      padding-left: 0;
+      margin-top: 10px;
+      line-height: 130%;
+    }
+    div.bbp-reply-author img.avatar {
+      top: 0;
+    }
   }
-
-  .article #bbpress-forums div.bbp-reply-author img.avatar{
-    top: 0;
-  }
-}
-
-/*Googleカスタム検索用*/
-#cse-search-box input[type="text"]{
-  width: calc(100% - 70px);
-  background-color: #fff;
 }
 
 #cse-search-box input {
+  &[type="text"] {
+    width: calc(100% - 70px);
+    background-color: #fff;
+  }
   display: inline-block;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: 34px;
   color: #222;
 }
 
-#main #bbpress-forums div.bbp-reply-author img.avatar{
+#main #bbpress-forums div.bbp-reply-author img.avatar {
   position: relative;
 }
 
-/*カテゴリ・アーカイブウィジェットをドロップダウンにしたときラベルを表示しない*/
-.widget_categories label.screen-reader-text,
-.widget_archive label.screen-reader-text{
+.widget_categories label.screen-reader-text, .widget_archive label.screen-reader-text {
   display: none;
 }
 /***********************
 * 旧Twitterボタンのような見た目を再現
 ***********************/
-.twitter-balloon-btn-defalt .balloon-btn-set {
-  display:block;
-  width:65px;
-  height:63px;
+.twitter-balloon-btn-defalt {
+  .balloon-btn-set {
+    display: block;
+    width: 65px;
+    height: 63px;
+  }
+  a.balloon-btn-link {
+    width: 65px;
+    position: relative;
+  }
+  .arrow-box {
+    width: 65px;
+  }
+  a.twitter-balloon-btn-link .tweet-label {
+    font: 11px "Helvetica Neue",Arial,sans-serif;
+    vertical-align: 25%;
+  }
 }
 
-.twitter-balloon-btn-defalt a.balloon-btn-link{
-  width:65px;
-  position: relative;
-}
-
-.twitter-balloon-btn-defalt .arrow-box {
-  width:65px;
-}
-
-.twitter-balloon-btn-defalt a.twitter-balloon-btn-link .tweet-label{
-  font: 11px "Helvetica Neue",Arial,sans-serif;
-  /*
-  font-weight: bold;
-  color: #000;
-  */
-  vertical-align: 25%;
-}
-
-#sns-group-top .twitter-balloon-btn-defalt .balloon-btn-set{
-  width: 100px;
-  margin-bottom: 0;
-}
-
-#sns-group-top .twitter-balloon-btn-defalt .balloon-btn-link{
-  width: 65px;
-}
-
-#sns-group-top .twitter-balloon-btn-defalt .arrow-box {
+#sns-group-top .twitter-balloon-btn-defalt {
+  .balloon-btn-set {
+    width: 100px;
+    margin-bottom: 0;
+  }
+  .balloon-btn-link {
+    width: 65px;
+  }
+  .arrow-box {
     width: 25px;
+  }
 }
 
 
 /************************************
 ** Push7通知ボタンのスタイル
 ************************************/
-.snsb .p7-b > .p7-left,
-.snsb .p7-b > .p7-top {
-  border-color: #bbb;
-  font-family: Arial;
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  color: #777;
+.snsb .p7-b > {
+  .p7-left, .p7-top {
+    border-color: #bbb;
+    font-family: Arial;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #777;
+  }
+  .p7-left {
+    margin-left: 6px;
+  }
+  .p7-top {
+    padding: 0;
+    line-height: 33px;
+    height: 33px;
+    margin-bottom: 4px;
+  }
 }
 
-.snsb .p7-b > .p7-left{
-  margin-left: 6px;
-}
-
-.snsb .p7-b > .p7-top{
-  padding: 0;
-  line-height: 33px;
-  height: 33px;
+#sharebar .snsb .p7-b > .p7-top {
   margin-bottom: 4px;
 }
 
-#sharebar .snsb .p7-b > .p7-top{
-  margin-bottom: 4px;
-}
-/*
-.push7-balloon-btn .p7-b > a > span{
-  display: none;
-}
-*/
-.push7-balloon-btn .p7-b > a > span{
-  font-size: 12px;
-}
-
-.push7-balloon-btn .p7-b > a{
+.push7-balloon-btn .p7-b > a {
+  > span {
+    font-size: 12px;
+  }
   border: 1px solid #ddd;
   padding: 2px 4px;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
-.push7-balloon-btn .p7-b > a:hover{
-  opacity: 0.7;
-}
-
-.facebook-save-button{
+.facebook-save-button {
   margin: 1em 0;
 }
 
-.widget-under-sns-buttons.widget_facebook_save_button .main-widget-label{
+.widget-under-sns-buttons.widget_facebook_save_button .main-widget-label {
   display: block;
   margin: 1em 0;
 }

@@ -2,28 +2,24 @@
 ** フッターナビメニュー
 ************************************/
 
-#footer-navi ul{
+#footer-navi ul {
   text-align: center;
   padding-left: 0;
-}
-
-#footer-navi ul li {
-  display: inline;
-  list-style: outside none none;
-}
-
-#footer-navi ul li::before {
-    content: "|";
-    padding: 0 0.6em;
-}
-
-#footer-navi ul li:first-child::before{
-  content: "";
-  padding: 0;
-}
-
-#footer-navi ul .sub-menu{
-  display: none;
+  li {
+    display: inline;
+    list-style: outside none none;
+    &::before {
+      content: "|";
+      padding: 0 0.6em;
+    }
+    &:first-child::before {
+      content: "";
+      padding: 0;
+    }
+  }
+  .sub-menu {
+    display: none;
+  }
 }
 /************************************
 ** フッター(footer)
@@ -38,12 +34,11 @@
 #footer-widget {
   margin: 10px auto;
   text-align: left;
-  padding:0 5%;
+  padding: 0 5%;
 }
 
-.footer-left,
-.footer-center,
-.footer-right{
+.footer-left, .footer-center, .footer-right {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px;
 }
@@ -53,69 +48,64 @@
   width: 34%;
 }
 
-.footer-center {
-  float: left;
-  width: 33%;
-}
-
-.footer-right {
+.footer-center, .footer-right {
   float: left;
   width: 33%;
 }
 
 #footer-widget {
   color: #fcfcfc;
+  ul {
+    list-style: none;
+    padding-left: 1em;
+  }
+  li {
+    font-size: 14px;
+  }
 }
 
-#footer-widget ul{
-  list-style:none;
-  padding-left:1em;
+#footer {
+  a {
+    color: #DCDCDC;
+  }
+  h3 {
+    color: #fff;
+    font-size: 16px;
+  }
 }
 
-#footer-widget li {
-  font-size: 14px;
-}
-
-#footer a {
-  color: #DCDCDC;
-}
-
-#footer h3{
-  color:#fff;
-  font-size: 16px;
-}
-
-#copyright{
+#copyright {
   padding: 20px 0;
   font-size: 80%;
-  text-align:center;
-}
-
-#copyright a{
-  text-decoration:none;
-  color:#fff;
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 
 
 /************************************
 ** TOPへ戻るボタン（Go to top）
 ************************************/
-#page-top{
-  position:fixed;
-  display:none;
+#page-top {
+  position: fixed;
+  display: none;
   right: 10px;
   bottom: 10px;
-}
-
-#page-top a{
-  color:#fff;
-  padding:7px;
-  text-decoration:none;
-  display:block;
-  cursor:pointer;
-  text-align:center;
-  background-color: #aaa;
-  line-height:100%;
-  border-radius: 4px;
-  font-size:11px;
+  a {
+    color: #fff;
+    padding: 7px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    background-color: #aaa;
+    line-height: 100%;
+    border-radius: 4px;
+    font-size: 11px;
+    &:hover{
+        opacity: 0.7;
+    }
+  }
 }
