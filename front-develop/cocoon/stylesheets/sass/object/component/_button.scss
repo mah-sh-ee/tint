@@ -1,0 +1,1483 @@
+
+/************************************
+** SNSシェアボタン
+************************************/
+
+.bc-brand-color {
+  &.sns-share {
+    &.ss-top .twitter-button, &.ss-bottom .twitter-button {
+      background-color: #1da1f2;
+    }
+  }
+  &.sns-follow .twitter-button {
+    background-color: #1da1f2;
+  }
+  &.sns-share {
+    &.ss-top .facebook-button, &.ss-bottom .facebook-button {
+      background-color: #3b5998;
+    }
+  }
+  &.sns-follow .facebook-button {
+    background-color: #3b5998;
+  }
+  &.sns-share {
+    &.ss-top .hatebu-button, &.ss-bottom .hatebu-button {
+      background-color: #2c6ebd;
+    }
+  }
+  &.sns-follow .hatebu-button {
+    background-color: #2c6ebd;
+  }
+  &.sns-share {
+    &.ss-top .google-plus-button, &.ss-bottom .google-plus-button {
+      background-color: #dd4b39;
+    }
+  }
+  &.sns-follow .google-plus-button {
+    background-color: #dd4b39;
+  }
+  &.sns-share {
+    &.ss-top .pocket-button, &.ss-bottom .pocket-button {
+      background-color: #ef4056;
+    }
+  }
+  &.sns-follow .pocket-button {
+    background-color: #ef4056;
+  }
+  &.sns-share {
+    &.ss-top .line-button, &.ss-bottom .line-button {
+      background-color: #00c300;
+    }
+  }
+  &.sns-follow .line-button {
+    background-color: #00c300;
+  }
+  &.sns-share {
+    &.ss-top .website-button, &.ss-bottom .website-button {
+      background-color: #002561;
+    }
+  }
+  &.sns-follow .website-button {
+    background-color: #002561;
+  }
+  &.sns-share {
+    &.ss-top .instagram-button, &.ss-bottom .instagram-button {
+      background-color: #405de6;
+    }
+  }
+  &.sns-follow .instagram-button {
+    background-color: #405de6;
+  }
+  &.sns-share {
+    &.ss-top .pinterest-button, &.ss-bottom .pinterest-button {
+      background-color: #bd081c;
+    }
+  }
+  &.sns-follow .pinterest-button {
+    background-color: #bd081c;
+  }
+  &.sns-share {
+    &.ss-top .youtube-button, &.ss-bottom .youtube-button {
+      background-color: #cd201f;
+    }
+  }
+  &.sns-follow .youtube-button {
+    background-color: #cd201f;
+  }
+  &.sns-share {
+    &.ss-top .flickr-button, &.ss-bottom .flickr-button {
+      background-color: #111;
+    }
+  }
+  &.sns-follow .flickr-button {
+    background-color: #111;
+  }
+  &.sns-share {
+    &.ss-top .amazon-button, &.ss-bottom .amazon-button {
+      background-color: #ff9900;
+    }
+  }
+  &.sns-follow .amazon-button {
+    background-color: #ff9900;
+  }
+  &.sns-share {
+    &.ss-top .github-button, &.ss-bottom .github-button {
+      background-color: #4078c0;
+    }
+  }
+  &.sns-follow .github-button {
+    background-color: #4078c0;
+  }
+  &.sns-share {
+    &.ss-top .feedly-button, &.ss-bottom .feedly-button {
+      background-color: #2bb24c;
+    }
+  }
+  &.sns-follow .feedly-button {
+    background-color: #2bb24c;
+  }
+  &.sns-share {
+    &.ss-top .rss-button, &.ss-bottom .rss-button {
+      background-color: #f26522;
+    }
+  }
+  &.sns-follow .rss-button {
+    background-color: #f26522;
+  }
+}
+
+.bc-brand-color-white {
+  &.sns-share {
+    &.ss-top a, &.ss-bottom a {
+      background-color: #fff;
+      font-weight: 500;
+    }
+  }
+  &.sns-follow a {
+    background-color: #fff;
+    font-weight: 500;
+  }
+  &.sns-share {
+    &.ss-top a:hover, &.ss-bottom a:hover {
+      background-color: #f5f8fa;
+      transition: all 0.5s ease;
+      color: #333435;
+    }
+  }
+  &.sns-follow a:hover {
+    background-color: #f5f8fa;
+    transition: all 0.5s ease;
+    color: #333435;
+  }
+  &.sns-share {
+    &.ss-top .twitter-button, &.ss-bottom .twitter-button {
+      color: #1da1f2;
+      border: 1px solid #1da1f2;
+    }
+  }
+  &.sns-follow .twitter-button {
+    color: #1da1f2;
+    border: 1px solid #1da1f2;
+  }
+  &.sns-share {
+    &.ss-top .facebook-button, &.ss-bottom .facebook-button {
+      color: #3b5998;
+      border: 1px solid #3b5998;
+    }
+  }
+  &.sns-follow .facebook-button {
+    color: #3b5998;
+    border: 1px solid #3b5998;
+  }
+  &.sns-share {
+    &.ss-top .hatebu-button, &.ss-bottom .hatebu-button {
+      color: #2c6ebd;
+      border: 1px solid #2c6ebd;
+    }
+  }
+  &.sns-follow .hatebu-button {
+    color: #2c6ebd;
+    border: 1px solid #2c6ebd;
+  }
+  &.sns-share {
+    &.ss-top .google-plus-button, &.ss-bottom .google-plus-button {
+      color: #dd4b39;
+      border: 1px solid #dd4b39;
+    }
+  }
+  &.sns-follow .google-plus-button {
+    color: #dd4b39;
+    border: 1px solid #dd4b39;
+  }
+  &.sns-share {
+    &.ss-top .pocket-button, &.ss-bottom .pocket-button {
+      color: #ef4056;
+      border: 1px solid #ef4056;
+    }
+  }
+  &.sns-follow .pocket-button {
+    color: #ef4056;
+    border: 1px solid #ef4056;
+  }
+  &.sns-share {
+    &.ss-top .line-button, &.ss-bottom .line-button {
+      color: #00c300;
+      border: 1px solid #00c300;
+    }
+  }
+  &.sns-follow .line-button {
+    color: #00c300;
+    border: 1px solid #00c300;
+  }
+  &.sns-share {
+    &.ss-top .website-button, &.ss-bottom .website-button {
+      color: #002561;
+      border: 1px solid #002561;
+    }
+  }
+  &.sns-follow .website-button {
+    color: #002561;
+    border: 1px solid #002561;
+  }
+  &.sns-share {
+    &.ss-top .instagram-button, &.ss-bottom .instagram-button {
+      color: #405de6;
+      border: 1px solid #405de6;
+    }
+  }
+  &.sns-follow .instagram-button {
+    color: #405de6;
+    border: 1px solid #405de6;
+  }
+  &.sns-share {
+    &.ss-top .pinterest-button, &.ss-bottom .pinterest-button {
+      color: #bd081c;
+      border: 1px solid #bd081c;
+    }
+  }
+  &.sns-follow .pinterest-button {
+    color: #bd081c;
+    border: 1px solid #bd081c;
+  }
+  &.sns-share {
+    &.ss-top .youtube-button, &.ss-bottom .youtube-button {
+      color: #cd201f;
+      border: 1px solid #cd201f;
+    }
+  }
+  &.sns-follow .youtube-button {
+    color: #cd201f;
+    border: 1px solid #cd201f;
+  }
+  &.sns-share {
+    &.ss-top .flickr-button, &.ss-bottom .flickr-button {
+      color: #111;
+      border: 1px solid #111;
+    }
+  }
+  &.sns-follow .flickr-button {
+    color: #111;
+    border: 1px solid #111;
+  }
+  &.sns-share {
+    &.ss-top .amazon-button, &.ss-bottom .amazon-button {
+      color: #ff9900;
+      border: 1px solid #ff9900;
+    }
+  }
+  &.sns-follow .amazon-button {
+    color: #ff9900;
+    border: 1px solid #ff9900;
+  }
+  &.sns-share {
+    &.ss-top .github-button, &.ss-bottom .github-button {
+      color: #4078c0;
+      border: 1px solid #4078c0;
+    }
+  }
+  &.sns-follow .github-button {
+    color: #4078c0;
+    border: 1px solid #4078c0;
+  }
+  &.sns-share {
+    &.ss-top .feedly-button, &.ss-bottom .feedly-button {
+      color: #2bb24c;
+      border: 1px solid #2bb24c;
+    }
+  }
+  &.sns-follow .feedly-button {
+    color: #2bb24c;
+    border: 1px solid #2bb24c;
+  }
+  &.sns-share {
+    &.ss-top .rss-button, &.ss-bottom .rss-button {
+      color: #f26522;
+      border: 1px solid #f26522;
+    }
+  }
+  &.sns-follow .rss-button {
+    color: #f26522;
+    border: 1px solid #f26522;
+  }
+  &.sns-share {
+    &.ss-top .line-button, &.ss-bottom .line-button {
+      color: #00c300;
+      border: 1px solid #00c300;
+    }
+  }
+  &.sns-follow .line-button {
+    color: #00c300;
+    border: 1px solid #00c300;
+  }
+  &.sns-share {
+    &.ss-top .line-button, &.ss-bottom .line-button {
+      color: #00c300;
+      border: 1px solid #00c300;
+    }
+  }
+  &.sns-follow .line-button {
+    color: #00c300;
+    border: 1px solid #00c300;
+  }
+  &.sns-share {
+    &.ss-top .line-button, &.ss-bottom .line-button {
+      color: #00c300;
+      border: 1px solid #00c300;
+    }
+  }
+  &.sns-follow .line-button {
+    color: #00c300;
+    border: 1px solid #00c300;
+  }
+  &.sns-share {
+    &.ss-top .line-button, &.ss-bottom .line-button {
+      color: #00c300;
+      border: 1px solid #00c300;
+    }
+  }
+  &.sns-follow .line-button {
+    color: #00c300;
+    border: 1px solid #00c300;
+  }
+}
+
+.sns-share {
+  &.ss-top {
+    margin-top: 0;
+    margin-bottom: 0;
+    .sns-share-message {
+      display: none;
+    }
+    &.ss-col-1 a {
+      width: 100%;
+    }
+  }
+  &.ss-bottom.ss-col-1 a {
+    width: 100%;
+  }
+  &.ss-top.ss-col-2 a, &.ss-bottom.ss-col-2 a {
+    width: 49%;
+  }
+  &.ss-top.ss-col-4 a, &.ss-bottom.ss-col-4 a {
+    width: 24%;
+  }
+  &.ss-top.ss-col-5 a, &.ss-bottom.ss-col-5 a {
+    width: 19%;
+  }
+  &.ss-top.ss-col-6 a, &.ss-bottom.ss-col-6 a {
+    width: 16%;
+  }
+  &.ss-top {
+    &.ss-high-and-low-lc a, .sns-share.ss-bottom.ss-high-and-low-lc a {
+      display: flex;
+      align-content: center;
+      line-height: 16px;
+    }
+  }
+  &.ss-bottom.ss-high-and-low-lc .sns-share.ss-top a {
+    display: flex;
+    align-content: center;
+    line-height: 16px;
+  }
+  &.ss-top {
+    &.ss-high-and-low-cl a, .sns-share.ss-bottom.ss-high-and-low-cl a {
+      display: flex;
+      align-content: center;
+      line-height: 16px;
+    }
+  }
+  &.ss-bottom {
+    &.ss-high-and-low-cl .sns-share.ss-top a, .sns-share.ss-top.ss-high-and-low-lc a {
+      display: flex;
+      align-content: center;
+      line-height: 16px;
+    }
+  }
+  &.ss-top.ss-high-and-low-lc .sns-share.ss-bottom a {
+    display: flex;
+    align-content: center;
+    line-height: 16px;
+  }
+  &.ss-bottom {
+    &.ss-high-and-low-lc a, .sns-share.ss-top.ss-high-and-low-cl a {
+      display: flex;
+      align-content: center;
+      line-height: 16px;
+    }
+  }
+  &.ss-top.ss-high-and-low-cl .sns-share.ss-bottom a, &.ss-bottom.ss-high-and-low-cl a {
+    display: flex;
+    align-content: center;
+    line-height: 16px;
+  }
+  &.ss-top {
+    &.ss-high-and-low-lc a .social-icon, .sns-share.ss-bottom.ss-high-and-low-lc a .social-icon {
+      display: block;
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+  &.ss-bottom.ss-high-and-low-lc .sns-share.ss-top a .social-icon {
+    display: block;
+    font-size: 16px;
+    margin: 0;
+  }
+  &.ss-top {
+    &.ss-high-and-low-cl a .social-icon, .sns-share.ss-bottom.ss-high-and-low-cl a .social-icon {
+      display: block;
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+  &.ss-bottom.ss-high-and-low-cl .sns-share.ss-top a .social-icon {
+    display: block;
+    font-size: 16px;
+    margin: 0;
+  }
+  &.ss-top {
+    &.ss-high-and-low-lc a .button-caption, .sns-share.ss-bottom.ss-high-and-low-lc a .button-caption {
+      display: block;
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+  &.ss-bottom.ss-high-and-low-lc .sns-share.ss-top a .button-caption {
+    display: block;
+    font-size: 16px;
+    margin: 0;
+  }
+  &.ss-top {
+    &.ss-high-and-low-cl a .button-caption, .sns-share.ss-bottom.ss-high-and-low-cl a .button-caption {
+      display: block;
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+  &.ss-bottom {
+    &.ss-high-and-low-cl .sns-share.ss-top a .button-caption, .sns-share.ss-top.ss-high-and-low-lc a .social-icon {
+      display: block;
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+  &.ss-top.ss-high-and-low-lc .sns-share.ss-bottom a .social-icon {
+    display: block;
+    font-size: 16px;
+    margin: 0;
+  }
+  &.ss-bottom {
+    &.ss-high-and-low-lc a .social-icon, .sns-share.ss-top.ss-high-and-low-cl a .social-icon {
+      display: block;
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+  &.ss-top.ss-high-and-low-cl .sns-share.ss-bottom a .social-icon {
+    display: block;
+    font-size: 16px;
+    margin: 0;
+  }
+  &.ss-bottom {
+    &.ss-high-and-low-cl a .social-icon, .sns-share.ss-top.ss-high-and-low-lc a .button-caption {
+      display: block;
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+  &.ss-top.ss-high-and-low-lc .sns-share.ss-bottom a .button-caption {
+    display: block;
+    font-size: 16px;
+    margin: 0;
+  }
+  &.ss-bottom {
+    &.ss-high-and-low-lc a .button-caption, .sns-share.ss-top.ss-high-and-low-cl a .button-caption {
+      display: block;
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+  &.ss-top.ss-high-and-low-cl .sns-share.ss-bottom a .button-caption, &.ss-bottom.ss-high-and-low-cl a .button-caption {
+    display: block;
+    font-size: 16px;
+    margin: 0;
+  }
+  &.ss-top {
+    &.ss-high-and-low-lc a .social-icon.button-caption, .sns-share.ss-bottom.ss-high-and-low-lc a .social-icon.button-caption {
+      font-size: 12px;
+    }
+  }
+  &.ss-bottom.ss-high-and-low-lc .sns-share.ss-top a .social-icon.button-caption {
+    font-size: 12px;
+  }
+  &.ss-top {
+    &.ss-high-and-low-cl a .social-icon.button-caption, .sns-share.ss-bottom.ss-high-and-low-cl a .social-icon.button-caption {
+      font-size: 12px;
+    }
+  }
+  &.ss-bottom.ss-high-and-low-cl .sns-share.ss-top a .social-icon.button-caption {
+    font-size: 12px;
+  }
+  &.ss-top {
+    &.ss-high-and-low-lc a .button-caption.button-caption, .sns-share.ss-bottom.ss-high-and-low-lc a .button-caption.button-caption {
+      font-size: 12px;
+    }
+  }
+  &.ss-bottom.ss-high-and-low-lc .sns-share.ss-top a .button-caption.button-caption {
+    font-size: 12px;
+  }
+  &.ss-top {
+    &.ss-high-and-low-cl a .button-caption.button-caption, .sns-share.ss-bottom.ss-high-and-low-cl a .button-caption.button-caption {
+      font-size: 12px;
+    }
+  }
+  &.ss-bottom {
+    &.ss-high-and-low-cl .sns-share.ss-top a .button-caption.button-caption, .sns-share.ss-top.ss-high-and-low-lc a .social-icon.button-caption {
+      font-size: 12px;
+    }
+  }
+  &.ss-top.ss-high-and-low-lc .sns-share.ss-bottom a .social-icon.button-caption {
+    font-size: 12px;
+  }
+  &.ss-bottom {
+    &.ss-high-and-low-lc a .social-icon.button-caption, .sns-share.ss-top.ss-high-and-low-cl a .social-icon.button-caption {
+      font-size: 12px;
+    }
+  }
+  &.ss-top.ss-high-and-low-cl .sns-share.ss-bottom a .social-icon.button-caption {
+    font-size: 12px;
+  }
+  &.ss-bottom {
+    &.ss-high-and-low-cl a .social-icon.button-caption, .sns-share.ss-top.ss-high-and-low-lc a .button-caption.button-caption {
+      font-size: 12px;
+    }
+  }
+  &.ss-top.ss-high-and-low-lc .sns-share.ss-bottom a .button-caption.button-caption {
+    font-size: 12px;
+  }
+  &.ss-bottom {
+    &.ss-high-and-low-lc a .button-caption.button-caption, .sns-share.ss-top.ss-high-and-low-cl a .button-caption.button-caption {
+      font-size: 12px;
+    }
+  }
+  &.ss-top.ss-high-and-low-cl .sns-share.ss-bottom a .button-caption.button-caption, &.ss-bottom.ss-high-and-low-cl a .button-caption.button-caption {
+    font-size: 12px;
+  }
+  &.ss-top.ss-high-and-low-lc a, &.ss-bottom.ss-high-and-low-lc a {
+    flex-direction: column;
+  }
+  &.ss-top.ss-high-and-low-lc a > span, &.ss-bottom.ss-high-and-low-lc a > span {
+    padding-top: 3px;
+  }
+  &.ss-top.ss-high-and-low-cl a, &.ss-bottom.ss-high-and-low-cl a {
+    flex-direction: column-reverse;
+  }
+}
+
+.sns-share-buttons {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  a {
+    width: 32%;
+    margin-bottom: 8px;
+    font-size: 18px;
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .button-caption {
+      font-size: 16px;
+      margin-left: 10px;
+    }
+    .share-count {
+      font-family: Arial, sans-serif;
+      position: absolute;
+      right: 3px;
+      bottom: 3px;
+      font-size: 12px;
+      line-height: 1;
+    }
+  }
+}
+
+.sbc-hide .share-count {
+  display: none;
+}
+
+/*******************************
+* 続きはWEBで的な検索ボックス
+********************************/
+
+.search-form {
+  margin: 3em 0;
+  div {
+    border: 1px solid #555;
+    border-radius: 2px;
+    padding: 5px;
+    margin-left: 10px;
+    display: inline-block;
+    &.sform {
+      min-width: 280px;
+      background-color: #fff;
+    }
+    &.sbtn {
+      background-color: #1155EE;
+      color: #fff;
+      padding-left: 20px;
+      padding-right: 30px;
+      position: absolute;
+      &:before {
+        content: "\f002";
+        font-family: FontAwesome;
+        margin-right: 7px;
+      }
+      &:after {
+        content: "\f25a";
+        font-family: FontAwesome;
+        color: #000;
+        position: absolute;
+        bottom: -28px;
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .search-form div {
+    padding: 3px 5px;
+    font-size: 75%;
+    &.sform {
+      min-width: 180px;
+    }
+    &.sbtn {
+      padding-left: 5px;
+      padding-right: 10px;
+      &:after {
+        font-size: 20px;
+        margin-left: -10px;
+      }
+    }
+  }
+}
+
+.btn, .ranking-item-link-buttons a {
+  color: #fff;
+  font-weight: bold;
+  margin: 1em;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  line-height: normal;
+  padding: 10px 16px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.btn:before, .ranking-item-link-buttons a:before, .btn:after, .ranking-item-link-buttons a:after {
+  font-family: FontAwesome;
+  margin-right: 12px;
+}
+
+.btn.btn-l:after, .ranking-item-link-buttons a:after {
+  content: "\f105";
+  position: absolute;
+  right: 0;
+  margin-top: -1px;
+  font-size: 30px;
+}
+
+#container {
+  .btn:hover, .ranking-item-link-buttons a:hover {
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #000;
+    transition: all 0.5s ease;
+  }
+}
+
+.ranking-item-link-buttons #container a:hover {
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #000;
+  transition: all 0.5s ease;
+}
+
+.btn-m {
+  padding: 14px 45px;
+  font-size: 16px;
+}
+
+.btn-l, .ranking-item-link-buttons a {
+  padding: 20px 0;
+  font-size: 18px;
+  display: block;
+}
+
+.btn-white {
+  color: #333;
+  background-color: #fff;
+}
+
+#container .btn-white:hover {
+  color: #333;
+}
+
+.btn-red, .ranking-item-link a {
+  background-color: #f44336;
+}
+
+.btn-pink {
+  background-color: #e91e63;
+}
+
+.btn-purple {
+  background-color: #9c27b0;
+}
+
+.btn-deep {
+  background-color: #673ab7;
+}
+
+.btn-indigo {
+  background-color: #3f51b5;
+}
+
+.btn-blue, .ranking-item-detail a {
+  background-color: #2196f3;
+}
+
+.btn-light-blue {
+  background-color: #03a9f4;
+}
+
+.btn-cyan {
+  background-color: #00bcd4;
+}
+
+.btn-teal {
+  background-color: #009688;
+}
+
+.btn-green {
+  background-color: #4caf50;
+}
+
+.btn-light-green {
+  background-color: #8bc34a;
+}
+
+.btn-lime {
+  background-color: #cddc39;
+}
+
+.btn-yellow {
+  background-color: #edd60e;
+}
+
+.btn-amber {
+  background-color: #ffc107;
+}
+
+.btn-orange {
+  background-color: #ff9800;
+}
+
+.btn-deep-orange {
+  background-color: #ff5722;
+}
+
+.btn-brown {
+  background-color: #795548;
+}
+
+.btn-grey {
+  background-color: #9e9e9e;
+}
+
+.btn-blue-grey {
+  background-color: #607d8b;
+}
+
+.btn-arrow-right:before {
+  content: "\f061";
+}
+
+.btn-chevron-right:before {
+  content: "\f054";
+}
+
+.btn-angle-right:before {
+  content: "\f105";
+}
+
+.btn-caret-right:before {
+  content: "\f0da";
+}
+
+.btn-long-arrow-right:before {
+  content: "\f178";
+}
+
+.btn-chevron-circle-right:before {
+  content: "\f138";
+}
+
+.btn-angle-double-right:before {
+  content: "\f101";
+}
+
+.btn-arrow-circle-right:before {
+  content: "\f0a9";
+}
+
+.btn-hand-o-right:before {
+  content: "\f0a4";
+}
+
+.btn-arrow-circle-o-right:before {
+  content: "\f18e";
+}
+
+.btn-caret-square-o-right:before {
+  content: "\f152";
+}
+
+.column-wrap {
+  display: flex;
+  position: relative;
+  > div {
+    width: 100%;
+    padding: 1em 1.2%;
+  }
+}
+
+/************************************
+** SNSフォローボタン
+************************************/
+
+.sns-follow-buttons a {
+  width: 100%;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  position: relative;
+  &:last-child {
+    margin-right: 0;
+  }
+  .follow-count {
+    font-family: Arial, sans-serif;
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+    font-size: 12px;
+    line-height: 1;
+  }
+}
+
+.fbc-hide .follow-count {
+  display: none;
+}
+
+.author-guest {
+  .feedly-follow-button-sq, .rss-follow-button-sq {
+    display: none;
+  }
+}
+
+/************************************
+** Facebookページを「いいね！」するエリアのスタイル
+************************************/
+
+div.fb-like-mobile {
+  display: none;
+}
+
+.fb-like-balloon {
+  height: 100px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  clear: both;
+}
+
+.fb-like-balloon-thumb {
+  float: left;
+  width: 100px;
+  img {
+    display: block;
+  }
+}
+
+.fb-like-balloon-body {
+  margin-right: 140px;
+  float: none;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 1.3em;
+  height: 100px;
+  overflow: hidden;
+  background-color: #fff;
+  color: #000;
+  box-sizing: border-box;
+  &::after {
+    content: '\f054';
+    position: absolute;
+    right: 110px;
+    top: 27px;
+    color: #ccc;
+    font-size: 50px;
+    font-family: FontAwesome;
+    line-height: 100%;
+  }
+}
+
+.fb-like-balloon-button {
+  background-color: #f3f3f3;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  float: right;
+  padding-top: 27px;
+  box-sizing: border-box;
+  /*  display: -webkit-flex;
+    display:         flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: center;
+            justify-content: center;*/
+  iframe {
+    background-color: #fff;
+  }
+}
+
+.fb-like-balloon-arrow-box {
+  float: left;
+  position: relative;
+  border: 1px solid #bbb;
+  margin-left: 12px;
+  width: calc(100% - 114px);
+  border-radius: 5px;
+}
+
+.fb-like-balloon-arrow-box-in {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.fb-like-balloon-arrow-box {
+  &:after, &:before {
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #fff;
+    border-width: 10px;
+    margin-top: -10px;
+  }
+  &:before {
+    border-color: rgba(221, 221, 221, 0);
+    border-right-color: #bbb;
+    border-width: 11px;
+    margin-top: -11px;
+  }
+}
+
+/************************************
+** Facebookページを「いいね！」するエリアのスタイル（サイドバーの時）
+************************************/
+
+.sidebar {
+  .fb-like-balloon-body {
+    &::after {
+      display: none;
+    }
+    font-size: 0.8em;
+    padding: 5px;
+    line-height: 1.1em;
+    margin-right: 0;
+    height: 70px;
+  }
+  .fb-like-balloon-arrow-box {
+    height: 100px;
+  }
+  .fb-like-balloon-button {
+    float: none;
+    width: 100%;
+    height: 30px;
+    display: block;
+    line-height: 24px;
+    padding-top: 0;
+  }
+  div {
+    &.fb-like-mobile {
+      display: block;
+    }
+    &.fb-like-pc {
+      display: none;
+    }
+  }
+}
+
+/************************************
+** Facebookページを「いいね！」するエリアのスタイル
+************************************/
+@media screen and (max-width: 639px) {
+  .fb-like-balloon-body {
+    margin-right: 100px;
+    font-size: 1em;
+    line-height: 1.2em;
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .fb-like-balloon-body {
+    font-size: 0.8em;
+    padding: 5px;
+    line-height: 1.1em;
+    margin-right: 0;
+    height: 70px;
+  }
+  .fb-like-balloon-arrow-box {
+    height: 100px;
+  }
+  .fb-like-balloon-button {
+    float: none;
+    width: 100%;
+    height: 30px;
+    display: block;
+    padding-top: 0;
+    line-height: 24px;
+  }
+  div {
+    &.fb-like-mobile {
+      display: block;
+    }
+    &.fb-like-pc {
+      display: none;
+    }
+  }
+}
+
+.mobile-menu-buttons {
+  background: #eee;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  line-height: 1.4;
+  height: 50px;
+  .menu-icon {
+    margin-top: 3px;
+    text-align: center;
+    display: block;
+    &::before {
+      font-family: FontAwesome;
+      font-size: 1em;
+    }
+  }
+  .menu-caption {
+    font-size: 12px;
+    text-align: center;
+    display: block;
+  }
+  .menu-button {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    > a {
+      color: #333435;
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: #f5f8fa;
+      transition: all 0.5s ease;
+      color: #333435;
+    }
+  }
+  .ad-area {
+    display: none;
+  }
+}
+
+.navi-menu-icon::before {
+  content: '\f0c9';
+}
+
+.home-menu-icon::before {
+  content: '\f015';
+}
+
+.search-menu-icon::before {
+  content: '\f002';
+}
+
+.top-menu-icon::before {
+  content: '\f062';
+}
+
+.sidebar-menu-icon::before {
+  content: '\f03b';
+}
+
+/*閉じる用の薄黒カバー*/
+
+#navi-menu-close, #sidebar-menu-close, #search-menu-close {
+  display: none;
+  /*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  /*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+/*中身*/
+
+.menu-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  /*最前面に*/
+  width: 100%;
+  /*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 400px;
+  /*最大幅（調整してください）*/
+  height: 100%;
+  background: #fff;
+  /*背景色*/
+  transition: .3s ease-in-out;
+  /*滑らかに表示*/
+  .sidebar {
+    width: 100%;
+  }
+}
+
+.navi-menu-content {
+  left: 0;
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);
+}
+
+.sidebar-menu-content {
+  right: 0;
+  -webkit-transform: translateX(105%);
+  transform: translateX(105%);
+}
+
+.search-menu-content {
+  transition: .3s ease-in-out;
+  position: fixed;
+  top: 40%;
+  z-index: 9999;
+  width: 90%;
+  left: 5%;
+  right: 5%;
+  -webkit-transform: translateY(600%);
+  transform: translateY(600%);
+  .search-edit {
+    width: 100%;
+  }
+}
+
+/*チェックが入ったらもろもろ表示*/
+
+#navi-menu-input:checked ~ #navi-menu-close, #sidebar-menu-input:checked ~ #sidebar-menu-close, #search-menu-input:checked ~ #search-menu-close {
+  display: block;
+  /*カバーを表示*/
+  opacity: .5;
+}
+
+#navi-menu-input:checked ~ #navi-menu-content, #sidebar-menu-input:checked ~ #sidebar-menu-content, #search-menu-input:checked ~ #search-menu-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.menu-drawer {
+  ul {
+    list-style: none;
+  }
+  li {
+    display: block;
+  }
+  a {
+    color: #333435;
+    text-decoration: none;
+    padding: 6px;
+    display: block;
+    &:hover {
+      background-color: #f5f8fa;
+      transition: all 0.5s ease;
+      color: #333435;
+    }
+  }
+  .sub-menu {
+    padding-left: 20px;
+  }
+}
+
+.menu-close-button {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  &::before {
+    font-family: FontAwesome;
+    content: "";
+    padding-right: 3px;
+    padding: 0;
+    font-size: 2em;
+  }
+}
+
+.ranking-items {
+  line-height: 1.4;
+  p {
+    font-size: 18px;
+    margin-top: 0;
+  }
+}
+
+.ranking-item {
+  padding: 3%;
+  margin-bottom: 20px;
+  border: 1px solid #cccfd2;
+  border-radius: 4px;
+  img {
+    &[width="1"], &[height="1"] {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+.ranking-item-name-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.ranking-item-name {
+  padding: 3px 2px 6px;
+}
+
+.ranking-item-rating {
+  color: #f5bc55;
+  font-size: 1.2em;
+}
+
+.ranking-item-img-desc, .ranking-item-link-buttons {
+  display: flex;
+}
+
+.ranking-item-img-desc > div, .ranking-item-link-buttons > div {
+  width: 100%;
+  padding: 2px 0;
+}
+
+.ranking-item-img-desc {
+  margin-top: 6px;
+}
+
+.ranking-item-name {
+  display: flex;
+}
+
+.ranking-item-name-crown {
+  margin-right: 10px;
+}
+
+.ranking-item-name-text {
+  width: 100%;
+}
+
+.ranking-item-image-tag {
+  max-width: 302px;
+  margin-right: 1em;
+  position: relative;
+}
+
+.ranking-item-description {
+  width: 100px;
+  position: relative;
+}
+
+.ranking-item-link-buttons {
+  margin-top: 6px;
+  > div {
+    padding: 0 3px;
+    position: relative;
+  }
+  a {
+    margin: 0 0 8px;
+    padding: 14px 0;
+    &:hover {
+      opacity: 0.7;
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+.g-crown, .s-crown, .c-crown {
+  width: 0;
+  height: 0;
+  border-bottom-style: solid;
+  border-bottom-width: 35px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  position: relative;
+}
+
+.g-crown:after, .s-crown:after, .c-crown:after {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+}
+
+.g-crown-circle, .s-crown-circle, .c-crown-circle {
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: -5px;
+  left: -21px;
+}
+
+.g-crown-circle:before, .s-crown-circle:before, .c-crown-circle:before {
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 19px;
+}
+
+.g-crown-circle:after, .s-crown-circle:after, .c-crown-circle:after {
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 38px;
+}
+
+.g-crown {
+  border-bottom: 35px solid #bfa930;
+  &:after {
+    border-bottom: 20px solid #ffe973;
+    border-left: 20px solid #ffe973;
+    border-right: 20px solid #ffd700;
+  }
+}
+
+.g-crown-circle {
+  background-color: #a68c00;
+  &:before, &:after {
+    background-color: #a68c00;
+  }
+}
+
+.s-crown {
+  border-bottom: 35px solid #909090;
+  &:after {
+    border-bottom: 20px solid #e0e0e0;
+    border-left: 20px solid #e0e0e0;
+    border-right: 20px solid silver;
+  }
+}
+
+.s-crown-circle {
+  background-color: #909090;
+  &:before, &:after {
+    background-color: #909090;
+  }
+}
+
+.c-crown {
+  border-bottom: 35px solid #69433f;
+  &:after {
+    border-bottom: 20px solid #8c4841;
+    border-left: 20px solid #8c4841;
+    border-right: 20px solid #5b1c15;
+  }
+}
+
+.c-crown-circle {
+  background-color: #69433f;
+  &:before, &:after {
+    background-color: #69433f;
+  }
+}
+
+.widget_item_ranking .main-widget-label {
+  font-size: 23px;
+  padding: 6px;
+  margin: 28px 0 12px;
+  font-weight: bold;
+}
+
+
+.sns-share, .sns-follow {
+  margin: 24px 0;
+}
+
+.sns-share-message, .sns-follow-message {
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+.sns-share-buttons, .sns-follow-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.sns-share-buttons a, .sns-follow-buttons a {
+  display: block;
+  background-color: #777879;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  height: 45px;
+}
+
+.sns-share-buttons a:hover, .sns-follow-buttons a:hover {
+  opacity: 0.7;
+  color: #fff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}

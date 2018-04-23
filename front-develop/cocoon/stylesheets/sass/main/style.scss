@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/*!
+Theme Name: Simplicity2 child
+Template:   simplicity2
+Version:    20161002
+*/
+
+/* Simplicity子テーマ用のスタイルを書く */
+/*!
+Theme Name: Simplicity2
+Description: Simplicityの意味は、単純、簡単、簡素、質素です。飾り気のないカスタマイズの土台となれるようなテーマを目指して作りました。
+Theme URI: https://wp-simplicity.com/
+Author: yhira
+Author URI: http://nelog.jp/
+Text Domain: simplicity2
+Version: 2.5.7
+Tags: two-columns, left-sidebar, right-sidebar
+License: GNU General Public License
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+// Import all the things
+
+// ==========================================================================
+// Foundation
+// ==========================================================================
+@import "../foundation/base";
+@import "../foundation/font";
+@import "../foundation/reset";
+
+// ==========================================================================
+// Layout
+// ==========================================================================
+@import "../layout/common";
+@import "../layout/header";
+@import "../layout/footer";
+
+// ==========================================================================
+// Object
+// ==========================================================================
+
+// -----------------------------------------------------------------
+// Component
+// -----------------------------------------------------------------
+@import "../object/component/grid";
+@import "../object/component/list";
+@import "../object/component/button";
+@import "../object/component/form";
+@import "../object/component/table";
+@import "../object/component/word-break";
+
+// -----------------------------------------------------------------
+// Project
+// -----------------------------------------------------------------
+//@import "../object/project/top";
+@import "../object/project/blog";
+
+// -----------------------------------------------------------------
+// Utility
+// -----------------------------------------------------------------
+@import "../object/utility/helper";
+@import "../object/utility/text";
+@import "../object/utility/entry-card";
+
+/************************************
+** レスポンシブデザイン用のメディアクエリ
+************************************/
+/*1240px以下*/
+@media screen and (max-width: 1240px){
+  /*必要ならばここにコードを書く*/
+}
+
+/*1030px以下*/
+@media screen and (max-width: 1030px){
+  /*必要ならばここにコードを書く*/
+}
+
+/*768px以下*/
+@media screen and (max-width: 768px){
+  /*必要ならばここにコードを書く*/
+}
+
+/*480px以下*/
+@media screen and (max-width: 480px){
+  /*必要ならばここにコードを書く*/
+}

@@ -1,0 +1,92 @@
+/************************************
+** サイドバーのスタイル
+************************************/
+.sidebar{
+  //float: right;
+  width: $sidebar_outer_width;
+  border: $sidebar_border_width $sidebar_border_style $transparent_border_color;
+  padding: $sidebar_padding_width;
+  border-radius: $basic_border_radius;
+  background-color: $bg_white;
+  //height: 5000px;
+
+  h3{
+    background-color: $xx_thin;
+    padding: 16px 10px;
+    margin: 16px 0;
+  }
+}
+
+.no-scrollable-sidebar .sidebar{
+  height: 100%;
+}
+
+.sidebar-scroll{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+
+// .sidebar-scroll{
+//   background-color: $bg_white;
+// }
+
+/************************************
+** サイドバーの非表示
+************************************/
+.no-sidebar .sidebar{
+  display: none;
+}
+
+
+/************************************
+** サイドバーの位置
+************************************/
+.sidebar-left{
+  .content-in{
+    flex-direction: row-reverse;
+
+  }
+
+  .main{
+    margin-right: 0;
+    margin-left: $between_main_and_sidebar;
+  }
+}
+
+
+.sidebar .ranking-item-img-desc,
+.sidebar .ranking-item-link-buttons,
+.footer .ranking-item-img-desc,
+.footer .ranking-item-link-buttons{
+  display: block;
+}
+
+.sidebar .ranking-item-image-tag,
+.footer .ranking-item-image-tag{
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar .ranking-item-name-text,
+.sidebar .widget_item_ranking .main-widget-label,
+.footer .ranking-item-name-text,
+.footer .widget_item_ranking .main-widget-label{
+  font-size: 20px;
+}
+
+.sidebar .ranking-item-description p,
+.footer .ranking-item-description p{
+  font-size: 0.9em;
+}
+
+///////////////////////////////////////
+// ブログカード
+///////////////////////////////////////
+.sidebar,
+.footer{
+  @include blog_card_768;
+}

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/*ビジュアルエディターのスタイルを書く*/
+body#tinymce.wp-autoresize {
+    padding: 0 20px !important;
+    margin-top: 0 !important;
+}
+
+.column-2,
+.column-3{
+  margin: 16px 0;
+}
+
+.column-2::before,
+.column-3::before{
+  content: "※カラムへの着色はエディタのみ";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1em;
+  width: 31%;
+  font-size: 0.8em;
+  padding: 4px 8px;
+  background-color: #f7dde4;
+  text-align: center;
+}
+
+html[lang="en"] .column-2::before,
+html[lang="en"] .column-3::before{
+  content: "* Coloring is Editor Only.";
+}
+
+.column-left{
+  background-color: #c7e1ef;
+}
+
+.column-center{
+  background-color: #c9e8d8;
+}
+
+.column-right{
+  background-color: #ffecd3;
+}

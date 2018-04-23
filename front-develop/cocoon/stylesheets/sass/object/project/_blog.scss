@@ -1,0 +1,674 @@
+/************************************
+** 本文部分
+************************************/
+
+.content-in {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.main {
+  width: 860px;
+  margin-right: 20px;
+  padding: 20px 29px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: relative;
+}
+
+.no-sidebar .content .main {
+  margin: 0;
+  width: 100%;
+}
+
+.no-scrollable-main .main {
+  height: 100%;
+}
+
+.main-scroll {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin-top: 2em;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media all and (-ms-high-contrast: none) {
+  .main-scroll {
+    position: static;
+    top: auto;
+  }
+}
+
+.publisher {
+  display: none;
+}
+
+#wpadminbar {
+  font-size: 13px;
+}
+/************************************
+** パンくずリスト
+************************************/
+
+.breadcrumb {
+  margin-top: 20px;
+  margin-bottom: 1em;
+  color: #777879;
+  font-size: 13px;
+  div {
+    display: inline;
+  }
+  span.sp {
+    margin: 0 10px;
+  }
+  a {
+    text-decoration: none;
+    color: #777879;
+  }
+  &.sbp-main-before, &.sbp-footer-before, &.pbp-main-before, &.pbp-footer-before {
+    background-color: #fff;
+    margin: auto;
+    padding: 5px;
+  }
+}
+
+/************************************
+** 内容
+************************************/
+
+.content {
+  margin-top: 24px;
+}
+
+.eye-catch {
+  position: relative;
+  margin-bottom: 1em;
+  display: block;
+  .cat-label {
+    position: absolute;
+    right: auto;
+    top: 0.4em;
+    bottom: auto;
+    left: 0.4em;
+    font-size: 14px;
+    padding: 4px 8px;
+    opacity: 0.9;
+    border: 1px solid #eee;
+  }
+  img {
+    display: block;
+  }
+}
+
+/*エントリー・アーカイブの見出し*/
+
+.entry-title {
+  font-size: 26px;
+  margin: 16px 0;
+  line-height: 1.3;
+}
+
+.archive-title {
+  font-size: 26px;
+  margin: 16px 0;
+  line-height: 1.3;
+  span {
+    margin-right: 10px;
+  }
+}
+
+.entry-content {
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+
+/*本文下カテゴリとタグ*/
+
+.entry-categories-tags {
+  font-family: "Meiryo", sans-serif;
+  > div {
+    margin-bottom: 0.5em;
+  }
+}
+
+.ctdt-one-row > div {
+  display: inline-block;
+}
+
+.ctdt-category-only .entry-tags, .ctdt-tag-only .entry-categories, .ctdt-none {
+  display: none;
+}
+
+/*本文下カテゴリ*/
+
+.cat-link {
+  color: #333435;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 5px;
+  padding: 2px 6px;
+  font-size: 12px;
+  background-color: #333435;
+  color: #fff;
+  border-radius: 2px;
+  &::before {
+    font-family: FontAwesome;
+    content: "";
+    padding-right: 3px;
+  }
+  &:hover {
+    opacity: 0.5;
+    color: #fff;
+  }
+}
+
+/*本文下タグ*/
+
+.tag-link, .comment-reply-link {
+  color: #333435;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 5px;
+  padding: 1px 5px;
+  font-size: 12px;
+  border: 1px solid #999a9b;
+  border-radius: 2px;
+}
+
+.tag-link::before, .comment-reply-link::before {
+  font-family: FontAwesome;
+  content: "";
+  padding-right: 3px;
+}
+
+.tag-link:hover, .comment-reply-link:hover {
+  background-color: #f5f8fa;
+  transition: all 0.5s ease;
+  color: #333435;
+}
+
+/************************************
+** 投稿・固定ページで使うHTML要素
+************************************/
+
+p {
+  margin: 1em 0;
+}
+
+table {
+  margin-bottom: 20px;
+  max-width: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  th {
+    background-color: #f3f4f5;
+  }
+  tr:nth-of-type(2n+1) {
+    background-color: #fafbfc;
+  }
+  th, td {
+    border: 1px solid #dddedf;
+    padding: 6px;
+  }
+}
+
+.scrollable-table {
+  table {
+    border-collapse: collapse;
+    margin: 1em 0;
+    max-width: 100%;
+  }
+  th {
+    background-color: #eee;
+    border: solid 1px #ccc;
+    padding: 3px 5px;
+    white-space: nowrap;
+  }
+  td {
+    border: solid 1px #ccc;
+    padding: 3px 5px;
+    white-space: nowrap;
+  }
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+
+.article {
+  dl {
+    margin: 1em 0;
+  }
+  dd {
+    margin-left: 40px;
+  }
+  ul, ol {
+    margin: 1em 0;
+    padding-left: 40px;
+  }
+  ul li, ol li {
+    margin: 0.2em;
+  }
+  ul {
+    ul, ol {
+      margin: 0;
+    }
+  }
+  ol {
+    ul, ol {
+      margin: 0;
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.25;
+    font-weight: bold;
+  }
+  h3, h4, h5, h6 {
+    margin-top: 35px;
+    margin-bottom: 20px;
+  }
+  h4, h5, h6 {
+    font-size: 20px;
+    padding: 6px 10px;
+  }
+  h2 {
+    font-size: 26px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 25px;
+    background-color: $color-site-main;
+  }
+  h3 {
+    border-left: 6px solid $color-site-main;
+    border-right: 1px solid $color-site-main;
+    border-top: 1px solid $color-site-main;
+    border-bottom: 1px solid $color-site-main;
+    font-size: 23px;
+    padding: 6px 20px;
+  }
+  h4 {
+    border-top: 2px solid $color-site-main;
+    border-bottom: 2px solid $color-site-main;
+  }
+  h5 {
+    border-bottom: 2px solid $color-site-main;
+  }
+  h6 {
+    border-bottom: 1px solid $color-site-main;
+  }
+  .column-wrap {
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 0;
+    }
+  }
+}
+
+/************************************
+** 引用（blockquote）
+************************************/
+
+blockquote {
+  background-color: #fafbfc;
+  border: 1px solid #cccdce;
+  margin: 1em 0;
+  padding: 10px;
+  position: relative;
+  &::before, &::after {
+    color: #C8C8C8;
+    content: "\"";
+    font-family: serif;
+    position: absolute;
+    font-size: 300%;
+  }
+  &::before {
+    line-height: 1.1;
+    left: 10px;
+    top: 0;
+  }
+  &::after {
+    line-height: 0;
+    right: 10px;
+    bottom: 0px;
+  }
+}
+
+/*本文下情報*/
+
+.footer-meta {
+  font-size: 0.8em;
+  text-align: right;
+}
+
+/*投稿者*/
+
+.author-info::before {
+  font-family: FontAwesome;
+  content: "";
+  padding-right: 3px;
+}
+
+/************************************
+** ページ管理画面の設定で「本文のみ」表示
+************************************/
+
+.content-only {
+  .header-container, .appeal, .carousel, .ad-area, .sns-share, .date-tags, .sns-follow, .article-footer, .under-entry-content, .breadcrumb, .main-scroll, .footer, .go-to-top-button {
+    display: none;
+  }
+}
+
+/************************************
+** 外部リンク・内部リンク
+************************************/
+
+span {
+  &.external-icon, &.internal-icon {
+    margin-left: 3px;
+    font-size: 0.8em;
+  }
+}
+
+.login-user-only {
+  text-align: center;
+  padding: 2em;
+  background-color: #fafbfc;
+  border: 1px solid #cccfd2;
+  margin: 1em 0;
+}
+
+/************************************
+** 広告
+************************************/
+
+.ad-area {
+  text-align: center;
+  margin-bottom: 1.8em;
+}
+
+.ad-label-invisible .ad-label {
+  display: none;
+}
+
+.ad-content-top {
+  margin-top: 1em;
+}
+
+.ad-single-rectangle .ad-responsive {
+  max-width: 336px;
+  margin: auto;
+}
+
+.ad-dabble-rectangle {
+  .ad-responsive {
+    max-width: 336px;
+    margin: auto;
+  }
+  .ad-wrap {
+    display: flex;
+  }
+  .ad-responsive {
+    width: 336px;
+  }
+}
+
+
+/************************************
+** ダブルレクタングル
+************************************/
+
+/************************************
+** 記事内広告
+************************************/
+@media screen and (max-width: 692px) {
+  .ad-dabble-rectangle .ad-responsive {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 626px) {
+  .ad-dabble-rectangle .ad-responsive {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .ad-dabble-rectangle {
+    .ad-wrap {
+      display: block;
+    }
+    .ad-responsive {
+      width: auto;
+      max-width: none;
+      margin: auto;
+    }
+    .ad-additional-double {
+      display: none;
+    }
+  }
+}
+
+/************************************
+** ブログカードのサムネイルスタイル
+************************************/
+
+.ib-right .blogcard-thumbnail, .eb-right .blogcard-thumbnail {
+  float: right;
+  margin-left: 1.6%;
+}
+
+.ib-right .blogcard-content, .eb-right .blogcard-content {
+  margin-left: 0;
+  margin-right: 170px;
+}
+
+/************************************
+** 目次
+************************************/
+
+.toc {
+  border: 1px solid #cccfd2;
+  font-size: 0.9em;
+  line-height: 1.5;
+  padding: 8px;
+  margin-bottom: 1em;
+  display: table;
+  ul, ol {
+    padding-left: 20px;
+    margin-top: 0.5em;
+  }
+  ul {
+    list-style: none;
+    padding-left: 5px;
+  }
+  a {
+    color: #333435;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.toc-title {
+  font-size: 1.1em;
+  text-align: center;
+}
+
+/************************************
+** h2-h6の見出し目次に連番を振る
+************************************/
+
+.toc.tnt-number-detail {
+  > ol {
+    padding-left: 0;
+  }
+  ol {
+    list-style: none;
+    li:before {
+      margin-right: 6px;
+    }
+    > li {
+      counter-increment: counter-h2;
+      counter-reset: counter-h3;
+      &:before {
+        content: counter(counter-h2);
+      }
+      > ol > li {
+        counter-increment: counter-h3;
+        counter-reset: counter-h4;
+        &:before {
+          content: counter(counter-h2) "." counter(counter-h3) ".";
+        }
+        > ol > li {
+          counter-increment: counter-h4;
+          counter-reset: counter-h5;
+          &:before {
+            content: counter(counter-h2) "." counter(counter-h3) "." counter(counter-h4) ".";
+          }
+          > ol > li {
+            counter-increment: counter-h5;
+            counter-reset: counter-h6;
+            &:before {
+              content: counter(counter-h2) "." counter(counter-h3) "." counter(counter-h4) "." counter(counter-h5) ".";
+            }
+            > ol > li {
+              counter-increment: counter-h6;
+              &:before {
+                content: counter(counter-h2) "." counter(counter-h3) "." counter(counter-h4) "." counter(counter-h5) "." counter(counter-h6) ".";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*******************************
+* 補足説明
+********************************/
+
+.information-box, .question-box, .alert-box, .information, .question, .alert {
+  background-color: #F4F3EB;
+  padding: 20px 20px 20px 72px;
+  border-radius: 4px;
+  position: relative;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.alert-box, .alert {
+  background-color: #fdeff2;
+}
+
+.information-box::before, .question-box::before, .alert-box::before, .information::before, .question::before, .alert::before {
+  font-family: "FontAwesome";
+  font-size: 50px;
+  position: absolute;
+  top: -13px;
+  left: 13px;
+  color: #EAE3B4;
+}
+
+.information-box::before, .information::before {
+  content: '\f05a';
+}
+
+.question-box::before, .question::before {
+  content: '\f059';
+}
+
+.alert-box::before, .alert::before {
+  content: '\f06a';
+  color: #f3aca9;
+}
+
+#wpadminbar .alert::before {
+  display: none;
+}
+
+@media screen and (max-width: 440px) {
+  .information-box, .question-box, .alert-box, .information, .question, .alert {
+    padding: 6px 6px 6px 24px;
+  }
+  .information-box::before, .question-box::before, .alert-box::before, .information::before, .question::before, .alert::before {
+    top: 6px;
+    left: 6px;
+    font-size: 18px;
+  }
+  .information-box::before, .question-box::before, .information::before, .question::before {
+    color: #d3c463;
+  }
+}
+
+/************************************
+** コメント
+************************************/
+
+.commets-list {
+  padding: 0;
+  list-style: none;
+  .avatar {
+    float: right;
+  }
+  .reply {
+    text-align: right;
+    font-size: 0.8em;
+  }
+  .comment-meta {
+    font-size: 0.8em;
+  }
+  .comment-body {
+    margin-bottom: 1em;
+  }
+  .children {
+    list-style: none;
+    padding-left: 20px;
+  }
+}
+
+.comment-form {
+  .required {
+    color: red;
+  }
+  .logged-in-as {
+    margin: 0.2em;
+    font-size: 0.8em;
+  }
+}
+
+.comment-area.website-hide .comment-form-url {
+  display: none;
+}
+
+.comment-reply-link {
+  font-size: 14px;
+  &:before {
+    content: '\f0e5';
+  }
+}
+
+/************************************
+** ソースコード
+************************************/
+
+pre {
+  background-color: #f3f4f5;
+  border: 1px solid #cccdce;
+  overflow: auto;
+  padding: 10px;
+  margin: 1em 0;
+}
+
+.lyrics{
+  .en{
+    color: $color-site-main;
+  }
+}

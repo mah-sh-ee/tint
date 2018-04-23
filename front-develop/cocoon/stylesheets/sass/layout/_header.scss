@@ -1,0 +1,235 @@
+/************************************
+** ヘッダー
+************************************/
+
+.header-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tagline {
+  text-align: center;
+  font-size: 14px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.site-name-text-link {
+  color: #333435;
+  text-decoration: none;
+  color: unset;
+  font-weight: normal;
+  &:hover {
+    color: unset;
+  }
+}
+
+.site-name-text {
+  font-size: 28px;
+}
+
+.logo-text {
+  padding: 20px 0 30px;
+  font-size: 1em;
+}
+
+.logo-image {
+  padding: 10px 0;
+}
+
+/************************************
+** ヘッダーレイアウト
+************************************/
+
+.header-container-in.hlt-top-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  .wrap {
+    width: auto;
+  }
+  .header {
+    background-image: none;
+  }
+  .logo-text {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+  .logo-image {
+    padding: 0;
+    margin: 0;
+  }
+  .site-name-text-link {
+    margin: 0 16px;
+    display: block;
+  }
+  .site-name-text {
+    font-size: 22px;
+    white-space: nowrap;
+  }
+  .tagline {
+    display: none;
+  }
+  .logo-header {
+    height: 60px;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  .navi {
+    width: 100%;
+  }
+  &.hlt-tm-small {
+    .site-name-text-link {
+      margin: 0 16px;
+    }
+    .site-name-text {
+      font-size: 20px;
+    }
+    .logo-header {
+      height: 40px;
+    }
+    .navi-in > ul > {
+      li, .menu-item-has-description > a > .caption-wrap {
+        line-height: 40px;
+        height: 40px;
+        display: block;
+      }
+    }
+    .item-description {
+      display: none;
+    }
+  }
+}
+
+.hlt-tm-right .navi-in > ul {
+  justify-content: flex-end;
+}
+
+/************************************
+** センターロゴ（トップメニュー）
+************************************/
+
+.header-container-in.hlt-center-logo-top-menu {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/************************************
+** グローバルメニュー
+************************************/
+
+.navi {
+  background-color: #fff;
+}
+
+.navi-in {
+  > ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    /*サブメニュー*/
+    li {
+      display: block;
+      width: 176px;
+      height: 60px;
+      line-height: 60px;
+      &:hover > ul {
+        display: block;
+      }
+    }
+    .menu-item-has-description {
+      > a > .caption-wrap {
+        line-height: 21.4285714286px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        height: 60px;
+        > div {
+          width: 100%;
+        }
+      }
+      .item-description {
+        font-size: 0.8em;
+      }
+    }
+    > .menu-item-has-children {
+      position: relative;
+      > a::after {
+        font-family: FontAwesome;
+        content: "";
+        padding-right: 3px;
+        position: absolute;
+        right: 3px;
+        top: 0;
+      }
+    }
+    .sub-menu {
+      display: none;
+      position: absolute;
+      margin-left: 0;
+      min-width: 240px;
+      list-style: none;
+      padding-left: 0;
+      background-color: #fafbfc;
+      z-index: 99;
+      text-align: left;
+      /*サブメニューのサブメニュー*/
+      li {
+        width: auto;
+      }
+      .menu-item-has-children {
+        position: relative;
+        > a::after {
+          font-family: FontAwesome;
+          content: "";
+          padding-right: 3px;
+          position: absolute;
+          right: 3px;
+          top: 0;
+        }
+      }
+      a {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      ul {
+        top: -60px;
+        left: 240px;
+        position: relative;
+      }
+    }
+  }
+  a {
+    color: #333435;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    &:hover {
+      background-color: #f5f8fa;
+      transition: all 0.5s ease;
+      color: #333435;
+      > ul {
+        display: block;
+      }
+    }
+  }
+  > .menu-mobile {
+    display: none;
+    .sub-menu {
+      display: none;
+    }
+  }
+}

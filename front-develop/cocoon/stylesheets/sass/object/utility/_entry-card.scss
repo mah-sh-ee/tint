@@ -1,0 +1,307 @@
+/************************************
+** エントリーカードの設定
+************************************/
+
+.a-wrap {
+  text-decoration: none;
+  display: block;
+  color: #333435;
+  padding: 10px;
+  margin-bottom: 20px;
+  &:hover {
+    background-color: #f5f8fa;
+    transition: all 0.5s ease;
+    color: #333435;
+  }
+}
+
+.card-thumb img {
+  width: 100%;
+}
+
+.entry-card-thumb {
+  width: 320px;
+}
+
+.related-entry-card-thumb {
+  width: 160px;
+}
+
+.cat-label {
+  position: absolute;
+  top: 0.3em;
+  left: 0.3em;
+  border: 1px solid #eee;
+  font-size: 11px;
+  color: #fff;
+  background-color: rgba(51, 51, 51, 0.7);
+  padding: 1px 5px;
+  max-width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.entry-card-content {
+  margin-left: 330px;
+}
+
+.entry-category::before {
+  font-family: FontAwesome;
+  content: "";
+  padding-right: 3px;
+}
+
+.entry-card-meta .entry-card-categorys {
+  display: none;
+}
+
+/************************************
+** エントリーカードタイプ
+************************************/
+
+.ect-vertical-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .entry-card-wrap {
+    width: 49.5%;
+    display: inline-block;
+    .entry-card-thumb {
+      width: 100%;
+      float: none;
+      img {
+        width: 100%;
+      }
+    }
+    .entry-card-content {
+      margin: 0;
+      padding-bottom: 1em;
+    }
+    .post-date, .post-update {
+      margin-right: 0;
+    }
+  }
+}
+
+.ect-vertical-card-3 {
+  justify-content: space-around;
+  .entry-card-wrap {
+    width: 33%;
+    padding: 7px;
+  }
+  .entry-card-snippet {
+    max-height: 4em;
+  }
+}
+
+.entry-card-border .entry-card-wrap {
+  border: 1px solid #cccfd2;
+}
+
+.entry-card-day span:last-child {
+  margin-right: 0;
+}
+
+
+@media screen and (max-width: 480px) {
+  h2, h3 {
+    font-size: 20px;
+  }
+  .related-entry-heading, .comment-title {
+    margin: 6px 0 12px;
+  }
+  .entry-card-snippet, .related-entry-card-snippet {
+    display: none;
+  }
+  .cat-label {
+    font-size: 8px;
+    padding: 0 3px;
+  }
+  .page-numbers {
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+  }
+  .pagination-next-link {
+    font-size: 1em;
+  }
+  .related-entry-card-thumb {
+    width: 38%;
+  }
+  .related-entry-card-content {
+    margin-left: 40%;
+    max-height: 100px;
+    font-size: 0.9em;
+  }
+  /*本文の見出し*/
+  .entry-title {
+    font-size: 20px;
+    padding: 10px;
+    margin: 6px 0 12px;
+  }
+  .article {
+    h2, h3, h4, h5, h6 {
+      font-size: 20px;
+      padding: 10px;
+      margin: 6px 0 12px;
+    }
+  }
+  .entry-title {
+    margin: 0;
+    margin-bottom: 6px;
+  }
+  body {
+    font-size: 16px;
+  }
+  .ss-top .sns-share-buttons a, .ss-bottom .sns-share-buttons a {
+    font-size: 14px;
+  }
+  .ss-top .sns-share-buttons a .button-caption, .ss-bottom .sns-share-buttons a .button-caption {
+    font-size: 14px;
+    margin-left: 4px;
+  }
+  .sns-share {
+    &.ss-top.ss-col-6 a, &.ss-bottom.ss-col-6 a {
+      width: 32%;
+    }
+  }
+  .pager-post-navi a figure {
+    width: 20%;
+  }
+  .related-mini-card .related-entry-card-wrap {
+    width: 100%;
+  }
+  .pager-post-navi.post-navi-square {
+    flex-direction: column;
+    a {
+      width: 100%;
+      padding: 7px;
+      &:last-child {
+        border-top-width: 0;
+        border-left-width: 1px;
+      }
+    }
+  }
+  .author-box {
+    font-size: 0.74em;
+    line-height: 1.3;
+    .author-thumb {
+      width: 24%;
+    }
+    .author-content {
+      margin-left: 26%;
+    }
+  }
+  .speech-person {
+    width: 40px;
+  }
+  .speech-wrap {
+    .speech-balloon {
+      font-size: 0.8em;
+      padding: 7px;
+      &::before, &::after {
+        border-bottom-width: 7px;
+        border-right-width: 7px;
+        border-top-width: 7px;
+      }
+      &::before {
+        left: -7px;
+      }
+      &::after {
+        left: -5px;
+      }
+    }
+    &.sbp-l .speech-balloon {
+      margin-left: 50px;
+    }
+    &.sbp-r .speech-balloon {
+      margin-right: 50px;
+      &::before {
+        right: -7px;
+        left: auto;
+        border-left-width: 7px;
+      }
+      &::after {
+        border-left-width: 7px;
+        right: -5px;
+        left: auto;
+      }
+    }
+  }
+  .admin-panel > div {
+    margin-bottom: 0.6em;
+    padding: 2px;
+  }
+  .menu-content {
+    max-width: 84%;
+  }
+  .ranking-item-img-desc, .ranking-item-link-buttons {
+    display: block;
+  }
+  .ranking-item-image-tag {
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .ranking-item-name-text, .widget_item_ranking .main-widget-label {
+    font-size: 20px;
+  }
+  a.facebook-follow-button {
+    top: 3px;
+  }
+  #header .site-name-text {
+    font-size: 18px;
+  }
+  .tagline {
+    font-size: 12px;
+  }
+  .navi-footer-in > .menu-footer li {
+    width: 49%;
+  }
+  .blogcard-content {
+    font-size: 0.84em;
+  }
+  .blogcard-snipet {
+    font-size: 0.74em;
+  }
+}
+.entry-card, .related-entry-card {
+  position: relative;
+  height: 100%;
+}
+
+.entry-card-thumb, .widget-entry-card-thumb, .related-entry-card-thumb, .carousel-entry-card-thumb {
+  float: left;
+  margin-top: 3px;
+  position: relative;
+}
+
+.entry-card-content, .related-entry-card-content {
+  padding-bottom: 1.6em;
+}
+
+.entry-card-title, .related-entry-card-title {
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+.entry-card-snippet, .related-entry-card-snippet {
+  font-size: 0.8em;
+}
+
+.entry-card-meta, .related-entry-card-meta {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  line-height: 1;
+}
+
+.entry-categories-tags {
+  margin-bottom: 18px;
+}
