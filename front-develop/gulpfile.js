@@ -20,10 +20,13 @@ var paths = {
     dest: '../assets/img/'
   },
   styles: {
-    src: './assets/stylesheets/sass',
+    src: './**/stylesheets/sass',
     srcEn: './assets/stylesheets/sass/main/style.scss',
-    files: './assets/stylesheets/sass/**/*.scss',
-    destEn: '../wp-content/themes/Simplicity2-child/',
+    srcJa: './cocoon/stylesheets/sass/main/style.scss',
+    files: './**/stylesheets/sass/**/*.scss',
+    filesJa: './cocoon/stylesheets/sass/**/*.scss',
+    destEn: '../wp-content/themes/simplicity2-child/',
+    destJa: '../wp-content/themes/cocoon-child-master/'
   },
   coffee: {
     src: './assets/javascripts/coffee/',
@@ -61,6 +64,20 @@ gulp.task('sassEn', function() {
     .pipe(postcss(processors))
     .pipe(gulp.dest(paths.styles.destEn));
 });
+gulp.task('sassJa', function() {
+  var processors = [
+      cssnext({ browsers: 'last 2 versions' })
+  ];
+  return gulp.src(paths.styles.srcJa)
+    // .pipe(cache('sass'))
+    .pipe(plumber({
+      errorHandler: notify.onError('Error:  <%= error.message %>')
+    }))
+    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(postcss(processors))
+    .pipe(gulp.dest(paths.styles.destJa));
+});
+
 // gulp.task('coffee', function() {
 //   return gulp.src(paths.coffee.files)
 //     .pipe(plumber({
@@ -72,6 +89,6 @@ gulp.task('sassEn', function() {
 // });
 
 gulp.task('default', ['browserSyncTask'] , function() {
-  gulp.watch(paths.styles.files, ['sassEn', 'browserSyncReload']);
+  gulp.watch(paths.styles.files, ['sassEn', 'sassJa' , 'browserSyncReload']);
   // gulp.watch(paths.coffee.files, ['coffee']);
 });
