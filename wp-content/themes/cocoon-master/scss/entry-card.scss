@@ -1,0 +1,166 @@
+/************************************
+** エントリーカードの設定
+************************************/
+.a-wrap{
+  text-decoration: none;
+  display: block;
+  color: $text_color;
+  padding: 10px;
+  margin-bottom: 20px;
+
+  &:hover {
+    @include bgc_hover;
+  }
+}
+
+.entry-card{
+  @extend %card;
+}
+
+//.new-entry-card-thumb,
+//.related-entry-card-thumb,
+.entry-card-thumb{
+  @extend %card_thumb;
+  // float: left;
+  // margin-top: $emtry_card_thumb_margin_top;
+  // position: relative;
+}
+
+.card-thumb img{
+  width: 100%;
+}
+
+.entry-card-thumb{
+  width: 320px;
+}
+
+.related-entry-card-thumb{
+  width: 160px;
+}
+
+.cat-label{
+  position: absolute;
+  top: 0.3em;
+  left: 0.3em;
+  border: 1px solid #eee;
+  font-size: 11px;
+  color: $bg_white;
+  background-color: $transpalent_black_bgc;
+  padding: 1px 5px;
+  max-width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// .entry-card-content,
+// .related-entry-card-content{
+
+// }
+
+.entry-card-content{
+  @extend %card_content;
+  margin-left: 330px;
+}
+
+.entry-card-title{
+  @extend %card_title;
+}
+
+.entry-card-snippet{
+  @extend %card_snippet;
+}
+
+// .entry-card-meta{
+//   //margin-top: 0.3em;
+//   // text-overflow: ellipsis;
+//   // white-space: nowrap;
+//   // width: 100%;
+//   div{
+//     display: inline;
+//   }
+
+// }
+
+// .published::before,
+// .category::before{
+//   margin-right: 2px;
+// }
+
+.entry-card-meta{
+  @extend %card_meta;
+}
+
+.entry-category{
+  @extend %entry_category;
+  // padding: 2px;
+  // //margin-right: 8px;
+  // display: inline;
+  // font-size: 0.7em;
+}
+
+.entry-category::before{
+  @include fontawesome('\f07b');
+}
+
+.entry-card-meta .entry-card-categorys{
+  display: none;
+}
+
+/************************************
+** エントリーカードタイプ
+************************************/
+.ect-vertical-card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .entry-card-wrap{
+    width: 49.5%;
+    display: inline-block;
+    .entry-card-thumb{
+      width: 100%;
+      float: none;
+      img{
+        width: 100%;
+      }
+    }
+    .entry-card-content{
+      margin: 0;
+      padding-bottom: 1em;
+    }
+    .post-date, .post-update{
+      margin-right: 0;
+    }
+  }
+}
+
+.ect-vertical-card-3{
+  justify-content: space-around;
+  .entry-card-wrap{
+    width: 33%;
+    padding: 7px;
+  }
+  .entry-card-snippet{
+    max-height: 4em;
+    overflow: hidden;
+  }
+}
+
+//エントリーカードの枠線
+.entry-card-border{
+  .entry-card-wrap{
+    border: 1px solid $basic_border_color;
+  }
+}
+
+.entry-card-day{
+  span:last-child{
+    margin-right: 0;
+  }
+}
+
+// .card-thumb{
+//   img:hover{
+//     animation: 1s ease 0s normal none 1 running flash;
+//   }
+// }

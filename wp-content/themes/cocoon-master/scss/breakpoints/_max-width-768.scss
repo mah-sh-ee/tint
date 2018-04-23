@@ -1,0 +1,272 @@
+.navi-in > .menu-header{
+  display: none;
+}
+
+#navi .navi-in > .menu-mobile{
+  display: flex;
+  > .menu-item-has-description > a > .caption-wrap{
+    height: 40px;
+    line-height: 16px;
+  }
+  li{
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    a{
+      font-size: 14px;
+
+      &:after{
+        display: none;
+      }
+    }
+  }
+}
+
+
+main.main,
+div.sidebar{
+  padding: 10px;
+  margin: 10px 0;
+  border-width: 0;
+}
+
+.article ul,
+.article ol{
+  padding-left: 26px;
+}
+
+.a-wrap{
+  padding: 7px;
+}
+
+.entry-card-content,
+.related-entry-card-content{
+  overflow: hidden;
+}
+
+.entry-card-content{
+  max-height: 120px;
+}
+
+.related-entry-card-content{
+  max-height: 80px;
+}
+
+.entry-card-title,
+.related-entry-card-title{
+  font-size: 17px;
+}
+
+.entry-card-snippet,
+.related-entry-card-snippet{
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.entry-card-meta,
+.related-entry-card-meta{
+  //position: relative;
+}
+
+table{
+  th,
+  td{
+    padding: 3px;
+    font-size: $text_size_s;
+  }
+}
+
+@include blog_card_768;
+
+// .blogcard-wrap{
+//   width: 100%;
+// }
+
+// .blogcard-thumbnail{
+//   width: 23%;
+// }
+
+// .blogcard-content{
+//   width: 76%;
+//   margin-left: 24%;
+//   max-height: 110px;
+//   font-size: 0.9em;
+// }
+
+//フォローボタン
+.sns-follow-buttons{
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  a{
+    margin-right: 0;
+    width: 48%;
+  }
+}
+
+/************************************
+** 関連記事
+************************************/
+.related-vartical-card{
+  .related-entry-card-wrap{
+    width: 49%;
+  }
+}
+
+.related-mini-card{
+  .related-entry-card-wrap{
+    margin-bottom: 10px;
+  }
+
+  .cat-label{
+    font-size: 8px;
+  }
+
+  .related-entry-card-thumb{
+    width: 30%;
+  }
+
+  .related-entry-card-content{
+    margin-left: 32%;
+  }
+}
+
+.header-container-in.hlt-top-menu{
+  flex-direction: column;
+}
+
+// .date-tags{
+//   margin: 0;
+//   line-height: 1;
+// }
+
+.ect-vertical-card-3 .entry-card-wrap{
+  width: 49%;
+}
+
+
+.header div.header-in,
+.appeal div.appeal-in {
+  min-height: auto;
+}
+
+
+.footer-widgets{
+  display: none;
+}
+
+.footer-widgets-mobile{
+  display: block;
+}
+
+///////////////////////////////////////
+// テーマ独自ウィジェット
+///////////////////////////////////////
+.widget_pc_text,
+.widget_pc_ad,
+.widget_pc_double_ads{
+  display: none;
+}
+
+
+.widget_mobile_text,
+.widget_mobile_ad{
+  display: block;
+}
+
+///////////////////////////////////////
+// SlickNavの表示
+///////////////////////////////////////
+.slicknav_menu{
+  display: block;
+}
+
+
+///////////////////////////////////////
+// Facebookボックス
+///////////////////////////////////////
+@include fb_like_box;
+.fb-like-box{
+  max-width: none;
+}
+.fb-like-thumb{
+  display: none;
+}
+
+///////////////////////////////////////
+// CTAボックス
+///////////////////////////////////////
+@include cta_box_nallow;
+
+///////////////////////////////////////
+// 吹き出し
+///////////////////////////////////////
+.sbp-l{
+  .speech-balloon{
+    margin-right: auto;
+  }
+}
+
+.sbp-r{
+  .speech-balloon{
+    margin-left: auto;
+  }
+}
+
+.column-wrap{
+  flex-direction: column;
+}
+
+//モバイル用管理パネル
+.admin-panel{
+  padding: 5px;
+  font-size: 14px;
+  line-height: 1.4;
+  >div{
+    margin: 3px;
+  }
+}
+
+.apdt-pc-only{
+  display: none;
+}
+
+.apdt-mobile-only{
+  display: flex;
+}
+
+.mobile-menu-buttons{
+  display: flex;
+}
+
+.mblt-slide-in{
+  margin-bottom: 50px;
+}
+
+.ranking-item-image-tag{
+  max-width: 30%;
+}
+
+#header .site-name-text{
+  font-size: 22px;
+}
+
+.eye-catch .cat-label {
+  font-size: 10px;
+  padding: 2px 4px;
+}
+
+textarea {
+  min-height: 160px;
+}
+
+.navi-footer-in > .menu-footer li{
+  width: 32%;
+  border: 1px solid $x_thin;
+  padding: 3px;
+  margin: 1px;
+}
+
+.footer-bottom.fdt-left-and-right .footer-bottom-content{
+  flex-direction: column;
+}

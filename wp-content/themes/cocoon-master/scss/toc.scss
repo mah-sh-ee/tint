@@ -1,0 +1,96 @@
+/************************************
+** 目次
+************************************/
+.toc{
+  border: 1px solid $basic_border_color;
+  font-size: 0.9em;
+  line-height: 1.5;
+  padding: 8px;
+  margin-bottom: 1em;
+  display: table;
+
+  ul, ol{
+    padding-left: 20px;
+    margin-top: 0.5em;
+  }
+
+  ul{
+    list-style: none;
+    padding-left: 5px;
+  }
+
+  a{
+    color: $text_color;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.toc-title{
+  font-size: 1.1em;
+  text-align: center;
+}
+
+/************************************
+** h2-h6の見出し目次に連番を振る
+************************************/
+.toc.tnt-number-detail{
+  >ol{
+    padding-left: 0;
+  }
+  ol{
+    list-style: none;
+    li:before{
+      margin-right: 6px;
+    }
+  }
+
+  ol{
+    >li{
+      counter-increment: counter-h2;
+      counter-reset: counter-h3;
+    }
+
+    >li:before{
+      content: counter(counter-h2);
+    }
+
+    >li > ol > li{
+      counter-increment: counter-h3;
+      counter-reset: counter-h4;
+    }
+
+    >li > ol > li:before{
+      content: counter(counter-h2)"."counter(counter-h3)".";
+    }
+
+    >li > ol > li > ol > li{
+      counter-increment: counter-h4;
+      counter-reset: counter-h5;
+    }
+
+    >li > ol > li > ol > li:before{
+      content: counter(counter-h2)"."counter(counter-h3)"."counter(counter-h4)".";
+    }
+
+    >li > ol > li > ol > li > ol > li{
+      counter-increment: counter-h5;
+      counter-reset: counter-h6;
+    }
+
+    >li > ol > li > ol > li > ol > li:before{
+      content: counter(counter-h2)"."counter(counter-h3)"."counter(counter-h4)"."counter(counter-h5)".";
+    }
+
+    >li > ol > li > ol > li > ol > li > ol > li{
+      counter-increment: counter-h6;
+    }
+
+    >li > ol > li > ol > li > ol > li > ol > li:before{
+      content: counter(counter-h2)"."counter(counter-h3)"."counter(counter-h4)"."counter(counter-h5)"."counter(counter-h6)".";
+    }
+  }
+}

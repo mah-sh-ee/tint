@@ -1,0 +1,94 @@
+/*
+ * Main(base)
+ */
+
+//
+// Color
+//
+$brand-color: #0C48A8; //#adb019;
+$black-light: #1a1a1a;
+$black-lighter: #666;
+$point-color: #5cb85c;
+$info-color: #5bc0de;
+$warning-color: #f0ad4e;
+$danger-color: #d9534f;
+
+.brand-color{ color: $brand-color; }
+.black-light{ color: $black-light; }
+.black-lighter{ color: $black-lighter; }
+.white { color: white; }
+
+//
+// color products
+//
+$color-product-green : #AACF52;
+$color-product-red   : #bd4f70;
+$color-product-black : #313131;
+$color-product-white : #ffffff;
+$color-site-main : #01AEF0;
+$color-site-sub : #00A79F;
+$color-site-point : #EF2B7D;
+//
+// Screen
+//
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+//
+// size
+//
+$size-header-h    : 90px;
+$size-header-sp-h : 60px;
+
+
+//
+// Font-family
+//
+//$noto-sans-medium: 'freight-sans-pro', 'Noto Sans Japanese Medium', helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
+
+$noto-sans-medium: 'Merriweather Sans' , helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
+
+
+//
+// Font-size
+//
+@mixin rem($size) {
+  font-size: $size + px;
+  font-size: ($size / 10) + rem;
+}
+
+//
+// Link
+//
+@mixin link($color, $normal, $hover) {
+  color: $color;
+  @if $normal == true {
+    text-decoration: underline;
+  } @else {
+    text-decoration: none;
+  }
+  @if $hover == true {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  } @else {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+//
+// clearfix
+//
+@mixin clearfix {
+  &:after {
+    content:" ";
+    display:block;
+    clear:both;
+  }
+}

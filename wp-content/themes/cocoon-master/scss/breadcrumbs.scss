@@ -1,0 +1,31 @@
+/************************************
+** パンくずリスト
+************************************/
+.breadcrumb{
+  margin-top: 20px;
+  margin-bottom: 1em;
+  color: $pallid_text_color;
+  font-size: 13px;
+}
+
+.breadcrumb div {
+  display: inline;
+}
+
+.breadcrumb span.sp{
+  margin: 0 10px;
+}
+
+.breadcrumb a{
+  text-decoration:none;
+  color: $pallid_text_color;
+}
+
+.breadcrumb.sbp-main-before,
+.breadcrumb.sbp-footer-before,
+.breadcrumb.pbp-main-before,
+.breadcrumb.pbp-footer-before{
+  background-color: $bg_white;
+  margin: auto;
+  padding: 5px;
+}

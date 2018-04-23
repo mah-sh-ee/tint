@@ -1,0 +1,39 @@
+div#wpforo-wrap{
+  .wpfl-1 .wpforo-forum-description,
+  .wpfl-1 .wpforo-last-post-title,
+  .wpforo-post-head{
+    font-size: 16px;
+  }
+
+  .wpfl-1 .head-title,
+  .wpforo-topic-title a{
+    font-size: 20px;
+  }
+
+  .wpforo-post .wpf-right .wpforo-post-content,
+  .wpforo-recent-wrap .wpforo-recent-content td.wpf-spost-title .wpf-spost-title-link,
+  .wpf-htr td{
+    font-size: 18px;
+  }
+
+  .wpfl-1 .wpforo-post,
+  #wpforo-stat-body{
+    background-color: #fcfcfc;
+  }
+
+  //ソースコード
+  pre,
+  .wpforo-post .wpf-right code {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    font-size: 17px;
+  }
+}
+
+.wpforo-list-item p {
+  margin: 0;
+}
+
+div#wpforo-wrap .wpforo-post .wpf-right .wpforo-post-content p{
+  line-height: 1.75;
+}

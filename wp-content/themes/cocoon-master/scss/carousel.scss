@@ -1,0 +1,56 @@
+/************************************
+** カルーセル
+************************************/
+.carousel{
+  margin-top: 10px;
+  line-height: 1.1;
+
+  // .cat-label{
+  //   display: none;
+  // }
+
+  .slick-arrow:before{
+    color: $thin;
+  }
+}
+
+.carousel-in{
+  background-color: $bg_white;
+  padding: 2px 0;
+}
+
+.carousel-content{
+  margin: 0 30px;
+  padding-bottom: 4px;
+  a{
+    float: left;
+    width: 10%;
+  }
+
+}
+
+.carousel-entry-card-wrap.a-wrap{
+  padding: 0.05% 0.1%;
+  margin: 0;
+}
+
+.carousel-entry-card-thumb{
+  @extend %card_thumb;
+  float: none;
+}
+
+.carousel-entry-card-title{
+  font-size: 16px;
+  margin-top: 4px;
+  max-height: 3.2em;
+  overflow: hidden;
+}
+
+/************************************
+** カルーセルの非表示設定
+************************************/
+.no-carousel{
+  .carousel{
+    display: none;
+  }
+}
